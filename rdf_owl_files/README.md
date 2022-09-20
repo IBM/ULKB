@@ -17,4 +17,4 @@ INDIVIDUAL FILES:
 
 3. ULKB_DATA_V6.ttl -- Instances and instance relations. The current version includes Propbank rolesets, Verbnet Classes and Wordnet verb synsets, linked using Semlink (https://verbs.colorado.edu/semlink/) and human curation.
 
-AGGREGATE FIlE: ULKB_V6_PUB.ttl -- It includes all of the above in a single file for convenience. 
+AGGREGATE FILE: ULKB_V6_PUB.ttl -- It includes all of the above graphs in a single file for deployment convenience. 
