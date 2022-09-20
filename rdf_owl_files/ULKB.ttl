@@ -1,0 +1,1659 @@
+# baseURI: http://www.ibm.com/ULKB
+# imports: http://www.w3.org/2006/time
+
+@prefix : <http://www.ibm.com/ULKB#> .
+@prefix Unis: <http://www.ibm.com/UniS#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.ibm.com/ULKB>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:AMRRef
+  a owl:AnnotationProperty ;
+  rdfs:comment "An identifier of the AMR frame where the entity comes from" ;
+  rdfs:label "AMR ref" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :identifier ;
+  rdfs:subPropertyOf :provenance ;
+.
+:Abstraction
+  a owl:Class ;
+  rdfs:comment "A lambda term" ;
+  rdfs:label "abstraction" ;
+  rdfs:subClassOf :LogicTerm ;
+.
+:AndStmt
+  a owl:Class ;
+  rdfs:comment "AND statement " ;
+  rdfs:label "and" ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:Appllication
+  a owl:Class ;
+  rdfs:comment "The application of a function to its parameter" ;
+  rdfs:label "application" ;
+  rdfs:subClassOf :LogicTerm ;
+.
+:Base
+  a owl:Class ;
+  rdfs:comment "The top level class of all classes for the universal schema. Statement connectors and logical operators are here to allow for full statements. " ;
+  rdfs:label "ULKB BASE" ;
+  rdfs:subClassOf owl:Thing ;
+.
+:CertaintyContext
+  a owl:Class ;
+  :alias "probabilistic context" ;
+  rdfs:comment "A context for certainty or probabilitic values. " ;
+  rdfs:label "certainty context" ;
+  rdfs:subClassOf :Context ;
+.
+:ConceptNet
+  a :KB ;
+  rdfs:comment "The ConceptNet knowledge base" ;
+  rdfs:label "ConceptNet" ;
+.
+:Constant
+  a owl:Class ;
+  rdfs:comment "A constant in an expression" ;
+  rdfs:label "constant" ;
+  rdfs:subClassOf :LogicTerm ;
+.
+:Constraint
+  a owl:Class ;
+  rdfs:comment "A constraint modifies an expression or a variable" ;
+  rdfs:label "constraint" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:ConstraintList
+  a owl:Class ;
+  rdfs:comment "A constraint list associated to constraints" ;
+  rdfs:label "constraint list" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:Context
+  a owl:Class ;
+  rdfs:comment "A graph pattern. It can be associated to a set of tuples through the hasComponent relations, or to a StatementPattern or expression. " ;
+  rdfs:label "context" ;
+  rdfs:subClassOf :Base ;
+.
+:DBID
+  a owl:AnnotationProperty ;
+  rdfs:comment "DBPedia ID" ;
+  rdfs:label "DBPedia ID" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :identifier ;
+  rdfs:subPropertyOf :provenance ;
+.
+:DataTypesAndExpressionsBase
+  a owl:Class ;
+  rdfs:comment "The elements in this hierarchy denote types of data, including logical expressions. " ;
+  rdfs:label "data types base" ;
+  rdfs:subClassOf :Base ;
+.
+:DomainEntity
+  a owl:Class ;
+  :alias "Entity" ;
+  rdfs:comment "The domain entities. Similar to WIkidata:Item. An entity can be an instance or a concept (a set of instances). If not declared explicitly, entities are concepts, meaning that they can have subconcepts and instances. Entities may have qualifiers." ;
+  rdfs:label "domain entity" ;
+  rdfs:subClassOf :Base ;
+.
+:EntitySchema
+  a owl:Class ;
+  :alias "artifact frame schema" ;
+  :alias "artifact frame type" ;
+  rdfs:comment "Describes the components of an artifact" ;
+  rdfs:label "entity schema" ;
+  rdfs:subClassOf :Schema ;
+.
+:EqualityStmt
+  a owl:Class ;
+  rdfs:comment "denotes equality of terms or expressionz" ;
+  rdfs:label "equals" ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:EventSchema
+  a owl:Class ;
+  :alias "event frame schema" ;
+  :alias "event frame type" ;
+  rdfs:comment "Describes the components of an event" ;
+  rdfs:label "event schema" ;
+  rdfs:subClassOf :Schema ;
+.
+:ExistsStmt
+  a owl:Class ;
+  rdfs:comment "existential quantifier statement " ;
+  rdfs:label "exists " ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:FalseStmt
+  a owl:Class ;
+  rdfs:comment "false statement " ;
+  rdfs:label "FALSE" ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:ForAllStmt
+  a owl:Class ;
+  rdfs:comment "universal quantifier statement " ;
+  rdfs:label "for all " ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:Frame
+  a owl:Class ;
+  rdfs:comment "A unit of linguistic meaning" ;
+  rdfs:label "a noun or verb frame" ;
+  rdfs:subClassOf :LinguisticClass ;
+.
+:Function
+  a owl:Class ;
+  rdfs:comment "A function has parameters and can be applied to other functions" ;
+  rdfs:label "function" ;
+  rdfs:subClassOf :LogicTerm ;
+.
+:IRI
+  a owl:AnnotationProperty ;
+  :alias "reference IRI" ;
+  :alias "reference link" ;
+  rdfs:comment "The iri of a resource" ;
+  rdfs:label "iri" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :identifier ;
+.
+:IffStmt
+  a owl:Class ;
+  rdfs:comment "if and only if" ;
+  rdfs:label "iff " ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:ImpliesStmt
+  a owl:Class ;
+  rdfs:comment "Implies statement " ;
+  rdfs:label "implies" ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:KB
+  a owl:Class ;
+  rdfs:comment "A knowledge base or knowledge graph. E.g., Wordnet, Verbnet, etc. " ;
+  rdfs:label "knowledge base" ;
+  rdfs:subClassOf :KBElement ;
+.
+:KBElement
+  a owl:Class ;
+  rdfs:comment "An element of a KB, vs a proxy or a member of an overlay" ;
+  rdfs:label "KB element" ;
+  rdfs:subClassOf :Base ;
+.
+:KBNode
+  a owl:Class ;
+  rdfs:comment "A node representing an entity in a KB" ;
+  rdfs:label "KB node" ;
+  rdfs:subClassOf :KBElement ;
+.
+:KBOverlay
+  a owl:Class ;
+  rdfs:comment "the overlay of a KB. " ;
+  rdfs:label "KB overlay" ;
+  rdfs:subClassOf :KBElement ;
+.
+:KBProxy
+  a owl:Class ;
+  rdfs:comment "A proxy of an element in an external KB. Also, member of a KBOverlay" ;
+  rdfs:label "knowledge base proxy" ;
+  rdfs:subClassOf :KBElement ;
+.
+:KBRelation
+  a owl:Class ;
+  rdfs:comment "A relation (or predicate) in a KB" ;
+  rdfs:label "KB relation" ;
+  rdfs:subClassOf :KBElement ;
+.
+:Lemma
+  a owl:Class ;
+  rdfs:comment "A lemma" ;
+  rdfs:label "lemma" ;
+  rdfs:subClassOf :LinguisticClass ;
+.
+:LexicalEntry
+  a owl:Class ;
+  rdfs:comment "A word (verb or noun) sense, as in WordNet or a roleset as in Propbank" ;
+  rdfs:label "lexical entry" ;
+  rdfs:subClassOf :SemSet ;
+.
+:LinguisticClass
+  a owl:Class ;
+  rdfs:comment "A class that that describes any aspect of a lexeme or a roleset" ;
+  rdfs:label "linguistic class" ;
+  rdfs:subClassOf :Base ;
+.
+:ListNode
+  a owl:Class ;
+  :alias "list item" ;
+  rdfs:comment "A node for a list" ;
+  rdfs:label "list node" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:LogicFormula
+  a owl:Class ;
+  rdfs:comment "Connector between operators, like IKL's 'that' or AMR" ;
+  rdfs:label "formula" ;
+  rdfs:subClassOf :LogicTerm ;
+.
+:LogicTerm
+  a owl:Class ;
+  rdfs:comment "terms" ;
+  rdfs:label "logic term" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:Mapping
+  a owl:Class ;
+  rdfs:comment "A mapping relates several entities (in some cases properties) coming from different KBs or KB Proxies" ;
+  rdfs:label "mapping" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:NamedFunction
+  a owl:Class ;
+  rdfs:comment "A named function" ;
+  rdfs:label "named function" ;
+  rdfs:subClassOf :Function ;
+.
+:NotStmt
+  a owl:Class ;
+  rdfs:comment "NOT statement " ;
+  rdfs:label "not" ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:ORStmt
+  a owl:Class ;
+  rdfs:comment "OR statement " ;
+  rdfs:label "or" ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:PDOnt
+  a owl:AnnotationProperty ;
+  rdfs:comment "IBM Process Diagnosis Ontology. Marker of provenance. " ;
+  rdfs:label "PD ont" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :provenance ;
+.
+:Parameter
+  a owl:Class ;
+  :alias "argument" ;
+  rdfs:comment "A parameter describes how an entity functions in a statement, an event or a schema. Argument, role and slots are equivalent classes in Chronos. " ;
+  rdfs:label "parameter" ;
+  rdfs:subClassOf :Variable ;
+.
+:Predicate
+  a owl:Class ;
+  rdfs:comment "The logic predicate in an expression. " ;
+  rdfs:label "predicate" ;
+  rdfs:subClassOf :Function ;
+.
+:PropBank
+  a :KB ;
+  rdfs:comment "The Propbank knowledge base" ;
+  rdfs:label "PropBank" ;
+.
+:ProvenanceTimeStamp
+  a owl:AnnotationProperty ;
+  rdfs:comment "When the data was incorporated to the model" ;
+  rdfs:label "provenance timestamp" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :IRI ;
+  rdfs:subPropertyOf :provenance ;
+.
+:Qualifier
+  a owl:Class ;
+  rdfs:comment "A qualifier associated to an expression" ;
+  rdfs:label "qualifier" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:QualifierName
+  a owl:AnnotationProperty ;
+  rdfs:comment "The name of a qualifier " ;
+  rdfs:domain :Qualifier ;
+  rdfs:label "qualifier name" ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "confidence"
+          "mandatory"
+          "should"
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :qualifierAttribute ;
+.
+:RelationSchema
+  a owl:Class ;
+  :alias "relation frame type" ;
+  :alias "relation schema" ;
+  rdfs:comment "Describes the components of a relation when considered a schema" ;
+  rdfs:label "relation schema" ;
+  rdfs:subClassOf :Schema ;
+.
+:Rule
+  a owl:Class ;
+  :alias "axiom" ;
+  rdfs:comment "A rule or axiom" ;
+  rdfs:label "statement element" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:Schema
+  a owl:Class ;
+  :alias "Frame" ;
+  :alias "frame schema" ;
+  :alias "frame type" ;
+  rdfs:comment "A schema represents a type of complex event that may contain steps or sub-events. It is a type for frames. " ;
+  rdfs:label "schema" ;
+  rdfs:subClassOf :SetOfStatements ;
+.
+:SchemaLibrary
+  a owl:Class ;
+  :alias "Schema set" ;
+  rdfs:comment "A set of schemas, also known as a schema library" ;
+  rdfs:label "schema library" ;
+  rdfs:subClassOf :SetOfStatements ;
+.
+:SchemaStep
+  a owl:Class ;
+  rdfs:comment "A schema step can be either a sub-schema OR an atomic event. Each Schema step has as parameter a simpler schema. " ;
+  rdfs:label "schema step" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:SelectionalRestriction
+  a owl:Class ;
+  rdfs:comment "The selectional restriction of a slot. They usually have a value and/or type" ;
+  rdfs:label "selectional restriction" ;
+  rdfs:subClassOf :Constraint ;
+.
+:SemSet
+  a owl:Class ;
+  rdfs:comment "A class of lemmas and frames with common syntax and/or semantics, not necessarily synonyms" ;
+  rdfs:label "semantic set" ;
+  rdfs:subClassOf :LinguisticClass ;
+.
+:SemanticPredicate
+  a owl:Class ;
+  rdfs:comment "A sentence that can be asserted of a frame. It is a Statement expression" ;
+  rdfs:label "semantic predicate" ;
+  rdfs:subClassOf :Predicate ;
+.
+:SemanticRole
+  a owl:Class ;
+  rdfs:comment "describes the participants of a verb frame. E.g., agent, location. etc." ;
+  rdfs:label "semantic role" ;
+  rdfs:subClassOf :LinguisticClass ;
+  rdfs:subClassOf :SlotType ;
+.
+:SetOfStatements
+  a owl:Class ;
+  rdfs:comment "A set of statements is a shortcut for large ANDed expressions. " ;
+  rdfs:label "set of statements" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:Slot
+  a owl:Class ;
+  :alias "argument" ;
+  :alias "role" ;
+  rdfs:comment "An argument describes how an entity functions in a statement, an event or a schema. Argument, role and slots are equivalent classes in Chronos. " ;
+  rdfs:label "slot" ;
+  rdfs:subClassOf :Parameter ;
+  owl:equivalentClass :StatementRole ;
+.
+:SlotType
+  a owl:Class ;
+  rdfs:comment "The parameter (variable or slot) of a statement or schema can have a role in that statement. E.g., agent, recipient, means, etc. An argument role can be thought of as metadata. " ;
+  rdfs:label "slot type" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:SpatialContext
+  a owl:Class ;
+  rdfs:comment "A location context. I.e., a set of statements that define location of one or more events. " ;
+  rdfs:label "spatial context" ;
+  rdfs:subClassOf :Context ;
+.
+:StatementRole
+  a owl:Class ;
+  :alias "argument" ;
+  :alias "statement slot" ;
+  rdfs:comment "An argument describes how an entity functions in a statement, an event or a schema. Argument, role and slots are equivalent classes in Chronos. " ;
+  rdfs:label "role" ;
+  rdfs:subClassOf :Parameter ;
+  owl:equivalentClass :Slot ;
+.
+:SyntacticForm
+  a owl:Class ;
+  rdfs:comment "Syntactic pattern of a phrase." ;
+  rdfs:label "syntactic form" ;
+  rdfs:subClassOf :Constraint ;
+.
+:TimeBase
+  a owl:Class ;
+  rdfs:comment "The base of time.owl" ;
+  rdfs:label "time base" ;
+  rdfs:subClassOf :Base ;
+.
+:TimeContext
+  a owl:Class ;
+  rdfs:comment "A temporal context. I.e., a set or list of statements that define temporally one or more events. " ;
+  rdfs:label "time context" ;
+  rdfs:subClassOf :Context ;
+.
+:TimePoint
+  a owl:Class ;
+  rdfs:comment "A simplified version of a time context associated to a point in time. " ;
+  rdfs:label "time point" ;
+  rdfs:subClassOf :TimeContext ;
+.
+:TimeRange
+  a owl:Class ;
+  rdfs:comment "A simplified version of a time context with a beginning and an end. " ;
+  rdfs:label "time range" ;
+  rdfs:subClassOf :TimeContext ;
+.
+:TrueStmt
+  a owl:Class ;
+  rdfs:comment "True statement " ;
+  rdfs:label "TRUE" ;
+  rdfs:subClassOf :LogicFormula ;
+.
+:ValueInterval
+  a owl:Class ;
+  rdfs:comment "Any value interval to measure confidence, importance, etc. " ;
+  rdfs:label "value interval" ;
+  rdfs:subClassOf :DataTypesAndExpressionsBase ;
+.
+:ValuePair
+  a owl:Class ;
+  rdfs:comment "A simple <type, value> pair. It is equivalent to a predicate expression : type(value). We specialize it for usability purposes. " ;
+  rdfs:label "value pair" ;
+  rdfs:subClassOf :Predicate ;
+.
+:Variable
+  a owl:Class ;
+  rdfs:comment "A variable is a value place holder in logical statements. Variables are argument. " ;
+  rdfs:label "variable" ;
+  rdfs:subClassOf :LogicTerm ;
+.
+:VerbNet
+  a :KB ;
+  rdfs:comment "The Verbnet knowledge base" ;
+  rdfs:label "VerbNet" ;
+.
+:WDID
+  a owl:AnnotationProperty ;
+  rdfs:comment "Wikidata ID" ;
+  rdfs:label "wikidata ID" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :identifier ;
+.
+:WDLink
+  a owl:AnnotationProperty ;
+  rdfs:comment "Link (URI) to a wikidata page" ;
+  rdfs:label "wikidata link"@en ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :IRI ;
+  rdfs:subPropertyOf :provenance ;
+.
+:WDName
+  a owl:AnnotationProperty ;
+  rdfs:comment "Used to represent the name of a Q or P node in Wikidata (represented in WDID). Used for readability purposes. " ;
+  rdfs:label "WD name" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:seeAlso :WDID ;
+  rdfs:subPropertyOf :identifier ;
+.
+:Wikidata
+  a :KB ;
+  rdfs:comment "The Wikidata knowledge base" ;
+  rdfs:label "Wikidata" ;
+.
+:WordNet
+  a :KB ;
+  rdfs:comment "The Wordnet knowledge base" ;
+  rdfs:label "WordNet" ;
+.
+:access
+  a owl:AnnotationProperty ;
+  rdfs:comment "Optional attribute to determine the access of an entity or a property. Either public or private. The default is public. The private marker can be combined with the provenance tagging. " ;
+  rdfs:domain :Base ;
+  rdfs:label "access" ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "public"
+          "private"
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:alias
+  a owl:AnnotationProperty ;
+  rdfs:comment "An alias or synonym" ;
+  rdfs:label "alias"@en ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:aspect_utterance
+  a owl:DatatypeProperty ;
+  rdfs:comment "aspect" ;
+  rdfs:label "aspect" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:associatedTo
+  a owl:ReflexiveProperty ;
+  a owl:SymmetricProperty ;
+  rdfs:comment "A semantically weak property. Mostly a documentation property and the semantics are up to the user" ;
+  rdfs:label "associated to" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:bindsVariable
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a quantifier and a variable" ;
+  rdfs:domain :LogicFormula ;
+  rdfs:label "binds variable"@en ;
+  rdfs:range :Variable ;
+  rdfs:subPropertyOf :usesVariable ;
+.
+:boundBy
+  a owl:TransitiveProperty ;
+  rdfs:comment "A variable is bound by either another variable or one or more entities in the domain. These entities may be more or less specific. " ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :Variable
+          :Context
+        ) ;
+    ] ;
+  rdfs:label "bound by" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :Variable
+          :DomainEntity
+          :Schema
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :hasParameterConstraint ;
+.
+:componentContextOf
+  a owl:ObjectProperty ;
+  rdfs:comment "A context may have one or several contexts associated to it. " ;
+  rdfs:domain :Context ;
+  rdfs:label "component context of" ;
+  rdfs:subPropertyOf :componentOf ;
+  owl:inverseOf :hasComponentContext ;
+.
+:componentOf
+  a owl:ObjectProperty ;
+  :alias "component of" ;
+  rdfs:comment "The component relationship can be used from composite statements. These relations can be ordered or not. " ;
+  rdfs:label "statement component of" ;
+  rdfs:subPropertyOf :partOf ;
+  owl:inverseOf :hasComponent ;
+.
+:componentSchemaOf
+  a owl:ObjectProperty ;
+  :alias "componentFrameOf" ;
+  rdfs:comment "A schema may have subschemas" ;
+  rdfs:domain :Schema ;
+  rdfs:label "component schema of" ;
+  rdfs:range :Schema ;
+  rdfs:subPropertyOf :componentOf ;
+  owl:inverseOf :hasComponentSchema ;
+.
+:confidence
+  a owl:AnnotationProperty ;
+  rdfs:comment "The confidence of a part of a model + instances" ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :LogicTerm
+        ) ;
+    ] ;
+  rdfs:label "confidence" ;
+  rdfs:range xsd:float ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:constrainedBy
+  a owl:TransitiveProperty ;
+  rdfs:comment "a constraint constrains a statement, a schema or a schema step" ;
+  rdfs:label "constrained by" ;
+  rdfs:range :Constraint ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:constrains
+  a owl:TransitiveProperty ;
+  rdfs:comment "a constraint constrains a statement, a schema or a schema step" ;
+  rdfs:domain :Constraint ;
+  rdfs:label "constrains" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:constraintData
+  a owl:DatatypeProperty ;
+  rdfs:comment "a constraint can be worked out as an entity" ;
+  rdfs:label "constraintData" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:contactPerson
+  a owl:AnnotationProperty ;
+  rdfs:comment "The person to contact regarding a given concept, mapping or subontology. Use sparingly at Upper Ontology levels. " ;
+  rdfs:label "contact person" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:contextDataProperty
+  a owl:DatatypeProperty ;
+  rdfs:comment "data property associated to contexts" ;
+  rdfs:label "context data property" ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:contextOf
+  a owl:ObjectProperty ;
+  rdfs:comment "A statement can have another statement as a context (a precondition, a postcondition)" ;
+  rdfs:domain :Context ;
+  rdfs:label "contextOf" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :LogicTerm
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+  owl:inverseOf :hasContext ;
+.
+:contextText
+  a owl:DatatypeProperty ;
+  rdfs:comment "Placeholder for context information  " ;
+  rdfs:domain :Context ;
+  rdfs:label "context text" ;
+  rdfs:subPropertyOf :contextDataProperty ;
+.
+:dateInfo
+  a owl:DatatypeProperty ;
+  rdfs:comment "Placeholder for context information  " ;
+  rdfs:domain :Context ;
+  rdfs:label "date info" ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf :contextDataProperty ;
+.
+:dbpediaLink
+  a owl:AnnotationProperty ;
+  rdfs:comment "link to DBPedia" ;
+  rdfs:label "dbpedia link" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :IRI ;
+  rdfs:subPropertyOf :provenance ;
+.
+:definition
+  a owl:DatatypeProperty ;
+  rdfs:comment "The definition associated to any entity. " ;
+  rdfs:label "definition" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :textInfo ;
+.
+:description
+  a owl:DatatypeProperty ;
+  rdfs:comment "The description associated to any entity" ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :textInfo ;
+.
+:documentDataProp
+  a owl:DatatypeProperty ;
+  rdfs:comment "data property associated to documents" ;
+  rdfs:label "document data property" ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:documentTitle
+  a owl:DatatypeProperty ;
+  rdfs:comment "the title associated to a document" ;
+  rdfs:label "document title" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :documentDataProp ;
+.
+:entailedBy
+  a owl:TransitiveProperty ;
+  rdfs:comment "A statement is a substatement of another" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "entailed by" ;
+  rdfs:range :LogicTerm ;
+  rdfs:subPropertyOf :topObjectProperty ;
+  owl:inverseOf :entails ;
+.
+:entails
+  a owl:TransitiveProperty ;
+  rdfs:comment "A statement is entails another" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "entails" ;
+  rdfs:range :LogicTerm ;
+  rdfs:subPropertyOf :topObjectProperty ;
+  owl:inverseOf :entailedBy ;
+.
+:entityDataProperty
+  a owl:DatatypeProperty ;
+  rdfs:comment "A data property that applies to entities in the domain as opposed to metaDataProperty" ;
+  rdfs:label "entity data property" ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:equivalentTo
+  a owl:ReflexiveProperty ;
+  a owl:SymmetricProperty ;
+  a owl:TransitiveProperty ;
+  :alias "same as" ;
+  :alias "the same as" ;
+  rdfs:comment "Similar to owl:equivalentClass but for all types of (non property) entities. Not to be confused with aliases, which indicate equivalent (linguistic) terms" ;
+  rdfs:label "equivalent to"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:example
+  a owl:AnnotationProperty ;
+  rdfs:comment "A user friendly example. Applicable to all entities in the graph. " ;
+  rdfs:label "example" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :metaAnnotation ;
+.
+:first
+  a owl:ObjectProperty ;
+  rdfs:comment "coupled with rest, it implements an rdf:lisr" ;
+  rdfs:label "first" ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:floatValue
+  a owl:DatatypeProperty ;
+  rdfs:comment "the value in a value pair" ;
+  rdfs:domain :ValuePair ;
+  rdfs:label "float value" ;
+  rdfs:range xsd:float ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:followedBy
+  a owl:ObjectProperty ;
+  rdfs:comment "order relation betweeen two entities " ;
+  rdfs:label "followed by"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:follows
+  a owl:ObjectProperty ;
+  rdfs:comment "order relation betweeen two entities " ;
+  rdfs:label "follows"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:hasAntecedent
+  a owl:ObjectProperty ;
+  rdfs:comment "The if part" ;
+  rdfs:domain :ImpliesStmt ;
+  rdfs:label "has antecedent" ;
+  rdfs:range :LogicTerm ;
+  rdfs:subPropertyOf :hasSubExpression ;
+.
+:hasAntonym
+  a owl:ObjectProperty ;
+  rdfs:comment "antonym term" ;
+  rdfs:label "has antonym" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:hasAntonymLemma
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a linguistic class and his different antonym lemmas. " ;
+  rdfs:label "has antonym lemma"@en ;
+  rdfs:range :Lemma ;
+  rdfs:subPropertyOf :hasLemma ;
+.
+:hasComponent
+  a owl:ObjectProperty ;
+  rdfs:comment "The component relationship can be used from composite statements. These relations can be ordered or not. " ;
+  rdfs:domain :Base ;
+  rdfs:label "has statement component" ;
+  rdfs:subPropertyOf :hasPart ;
+  owl:inverseOf :componentOf ;
+.
+:hasComponentContext
+  a owl:ObjectProperty ;
+  rdfs:comment "A context may have one or several contexts associated to it. " ;
+  rdfs:label "has component context" ;
+  rdfs:range :Context ;
+  rdfs:subPropertyOf :hasComponent ;
+  owl:inverseOf :componentContextOf ;
+.
+:hasComponentSchema
+  a owl:ObjectProperty ;
+  :alias "hasComponentFrame" ;
+  rdfs:comment "A schema may have component schemas" ;
+  rdfs:domain :Schema ;
+  rdfs:label "has component schema" ;
+  rdfs:range :Schema ;
+  rdfs:subPropertyOf :hasComponent ;
+  owl:inverseOf :componentSchemaOf ;
+.
+:hasConsequent
+  a owl:ObjectProperty ;
+  rdfs:comment "The then part" ;
+  rdfs:domain :ImpliesStmt ;
+  rdfs:label "has antecedent" ;
+  rdfs:range :LogicTerm ;
+  rdfs:subPropertyOf :hasSubExpression ;
+.
+:hasContext
+  a owl:ObjectProperty ;
+  rdfs:comment "A statement can have another statement as a context (a precondition, a postcondition)" ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :LogicTerm
+        ) ;
+    ] ;
+  rdfs:label "has context" ;
+  rdfs:range :Context ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+  owl:inverseOf :contextOf ;
+.
+:hasFirstComponentStatement
+  a owl:ObjectProperty ;
+  rdfs:comment "Component statements may need to be ordered, like in the case of an implication.  " ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "has first component statement" ;
+  rdfs:range :LogicTerm ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:hasFirstSchemaStep
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema or frame has a schema step as first step" ;
+  rdfs:domain :Schema ;
+  rdfs:label "has first schema step" ;
+  rdfs:range :SchemaStep ;
+  rdfs:subPropertyOf :hasFirstStep ;
+.
+:hasFirstStep
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema or frame has a sub-schema or sub-frame as first step" ;
+  rdfs:label "has first step" ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:hasHypernym
+  a owl:TransitiveProperty ;
+  rdfs:comment "A  linguistic property among lemmas" ;
+  rdfs:label "has hypernym"@en ;
+  rdfs:subPropertyOf :subConceptOf ;
+.
+:hasHypernymLemma
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a linguistic class and his different hypernym lemmas. " ;
+  rdfs:label "has hypernym lemma"@en ;
+  rdfs:range :Lemma ;
+  rdfs:subPropertyOf :hasLemma ;
+.
+:hasHyponymLemma
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a linguistic class and his different hyponym lemmas. " ;
+  rdfs:label "has hyponym lemma"@en ;
+  rdfs:range :Lemma ;
+  rdfs:subPropertyOf :hasLemma ;
+.
+:hasLemma
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a linguistic class or term and his different lemmas. Notice that they don't need to be synonyms, as in the class of Verbnet" ;
+  rdfs:label "has lemma"@en ;
+  rdfs:range :Lemma ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:hasMapping
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between an entity and the mapping entities" ;
+  rdfs:label "has mapping"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:hasNextComponentStatement
+  a owl:ObjectProperty ;
+  rdfs:comment "Component statements may need to be ordered, like in the case of an implication.  " ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "has next component statement" ;
+  rdfs:range :LogicTerm ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:hasNextSchemaStep
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema step has a next schema step" ;
+  rdfs:domain :SchemaStep ;
+  rdfs:label "has first schema step" ;
+  rdfs:range :SchemaStep ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:hasNextStep
+  a owl:ObjectProperty ;
+  rdfs:comment "Between process steps" ;
+  rdfs:label "has next step" ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:hasObject
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a tuple or assertion and its object item" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "has object" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :LogicTerm
+          rdfs:Literal
+          :Variable
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :hasParameter ;
+.
+:hasParameter
+  a owl:ObjectProperty ;
+  rdfs:comment "Statements have parameters (variables, arguments, slots roles). In general, parameters point to a single statement (hasSubject, hasRelation, hasObject), an entity or they can point to variables (as in slots and roles).  " ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "has parameter" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :LogicTerm
+          rdfs:Literal
+          :Variable
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+.
+:hasParameterConstraint
+  a owl:ObjectProperty ;
+  :alias "has argument constraint" ;
+  :alias "has role constraint" ;
+  :alias "has slot constraint" ;
+  rdfs:comment "A constraint associated to the parameter (variable, slot) of a statement or schema. Only glo:DomainEntity's are used now as constraints. " ;
+  rdfs:domain :Variable ;
+  rdfs:label "has parameter constraint" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :LogicTerm
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+  owl:equivalentProperty :hasSlotConstraint ;
+.
+:hasPart
+  a owl:ObjectProperty ;
+  rdfs:comment "meronymy" ;
+  rdfs:label "has part" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+  owl:inverseOf :partOf ;
+.
+:hasRelation
+  a owl:ObjectProperty ;
+  :alias "has predicate" ;
+  rdfs:comment "Relation between a statement or tuple and the relation it refers to" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "has relation" ;
+  rdfs:range owl:ObjectProperty ;
+  rdfs:subPropertyOf :hasParameter ;
+.
+:hasRole
+  a owl:ObjectProperty ;
+  :alias "has slot" ;
+  rdfs:comment "A schema or logic statement has roles (slots) or arguments. Roles (slots) can be variables. " ;
+  rdfs:label "has role" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :Variable
+          :LogicTerm
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :statementAttributeProperty ;
+  owl:equivalentProperty :hasSlot ;
+.
+:hasSchemaStep
+  a owl:ObjectProperty ;
+  rdfs:comment "A schema may have one or more steps which may be subschemas. If order is known, use hasNextStep. " ;
+  rdfs:domain :Schema ;
+  rdfs:label "has step" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :SchemaStep
+          :Schema
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :hasStep ;
+.
+:hasSimilarLemma
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a linguistic class and his related lemmas. " ;
+  rdfs:label "has similar lemma"@en ;
+  rdfs:range :Lemma ;
+  rdfs:subPropertyOf :hasLemma ;
+.
+:hasSlot
+  a owl:ObjectProperty ;
+  :alias "has role" ;
+  rdfs:comment "A schema or logic statement has slots (roles) or arguments. Slots (roles) can be variables. " ;
+  rdfs:label "has slot" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :Variable
+          :LogicTerm
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :statementAttributeProperty ;
+  owl:equivalentProperty :hasRole ;
+.
+:hasSlotConstraint
+  a owl:ObjectProperty ;
+  :alias "has argument constraint" ;
+  :alias "has role constraint" ;
+  :alias "has slot constraint" ;
+  rdfs:comment "A constraint associated to the parameter (variable, slot) of a statement or schema. Only glo:DomainEntity's are used now as constraints. " ;
+  rdfs:domain :Variable ;
+  rdfs:label "has slot constraint" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :LogicTerm
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :toReferentObjProp ;
+  owl:equivalentProperty :hasParameterConstraint ;
+.
+:hasSlotType
+  a owl:ObjectProperty ;
+  :alias "has argument type" ;
+  :alias "has role function" ;
+  :alias "has role type" ;
+  :alias "has slot function" ;
+  :alias "has slot type" ;
+  rdfs:comment "An event or schema may have several associated role types, which describe the semantics of the argument/slot/type. E.g., agent, recipient, means, etc. " ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "has slot role" ;
+  rdfs:range :SlotType ;
+  rdfs:subPropertyOf :statementAttributeProperty ;
+.
+:hasStep
+  a owl:ObjectProperty ;
+  rdfs:comment "a step of a statement or schema" ;
+  rdfs:label "has step" ;
+  rdfs:subPropertyOf :hasComponent ;
+  owl:inverseOf :stepOf ;
+.
+:hasSubExpression
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between an expression and its subexpression" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "has subexpression" ;
+  rdfs:range :LogicTerm ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:hasSubject
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a statement or tuple and its subject item, which can be a Domain Entity or a statement" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "has subject" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :DomainEntity
+          :LogicTerm
+          :Variable
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :hasParameter ;
+.
+:hasSynonymLemma
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a linguistic class and his different synonym lemmas. " ;
+  rdfs:label "has synonym lemma"@en ;
+  rdfs:range :Lemma ;
+  rdfs:subPropertyOf :hasSimilarLemma ;
+.
+:hasValuePair
+  a owl:ObjectProperty ;
+  rdfs:comment "A container may have one or mor value pairs" ;
+  rdfs:label "has value pair" ;
+  rdfs:range :ValuePair ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:identifiedTerm
+  a owl:DatatypeProperty ;
+  rdfs:comment "A term associated to a term that has not been identified. " ;
+  rdfs:label "identified term" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:identifier
+  a owl:AnnotationProperty ;
+  :alias "id" ;
+  rdfs:comment "a field that identifies the object that is associated to. For IRIs, use the annotation property referenceIRI." ;
+  rdfs:label "identifier" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:inKB
+  a owl:TransitiveProperty ;
+  rdfs:comment "an element of a KB" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "in KB" ;
+  rdfs:range :LogicTerm ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:instanceOfSchema
+  a owl:ObjectProperty ;
+  rdfs:comment "A frame is an instantiation of a schema" ;
+  rdfs:label "instanceOfSchema" ;
+  rdfs:range :Schema ;
+  rdfs:subPropertyOf :instantiatedBy ;
+  owl:inverseOf :schemaHasInstance ;
+.
+:instantiatedBy
+  a owl:ObjectProperty ;
+  :alias "instance of" ;
+  rdfs:comment "Similar to rdf:type, but in the case of a statement or an expression, an instantiation includes components and steps. It may also account for variables. " ;
+  rdfs:label "instantiated by"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+  owl:inverseOf :instantiates ;
+.
+:instantiates
+  a owl:ObjectProperty ;
+  :alias "instance of" ;
+  rdfs:comment "Similar to rdf:type, but in the case of a statement or an expression, an instantiation includes components and steps. It may also account for variables. " ;
+  rdfs:label "instantiates"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+  owl:inverseOf :instantiatedBy ;
+.
+:knownDataForConcept
+  a owl:AnnotationProperty ;
+  rdfs:comment "A way to document the domain of a data property. The data property belongs to a concept and its subconcepts. " ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:label "known data for concept" ;
+  rdfs:range :Base ;
+  rdfs:subPropertyOf :metaAnnotation ;
+.
+:knownDataForInstance
+  a owl:AnnotationProperty ;
+  rdfs:comment "A way to document the domain of a data property. The data property belongs to the instances of a concept (and its subconcepts). " ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:label "known data for instance" ;
+  rdfs:range :Base ;
+  rdfs:subPropertyOf :metaAnnotation ;
+.
+:knownOPDomain
+  a owl:AnnotationProperty ;
+  rdfs:comment "A way to document the domain of an object property (relation) . The enforcement is up to the user application" ;
+  rdfs:domain owl:ObjectProperty ;
+  rdfs:label "known OP domain" ;
+  rdfs:range :Base ;
+  rdfs:subPropertyOf :metaAnnotation ;
+.
+:knownOPRange
+  a owl:AnnotationProperty ;
+  rdfs:comment "A way to document the domain of an object property (relation) . The enforcement is up to the user application" ;
+  rdfs:domain owl:ObjectProperty ;
+  rdfs:label "known OP range" ;
+  rdfs:range :Base ;
+  rdfs:subPropertyOf :metaAnnotation ;
+.
+:logicOperatorName
+  a owl:DatatypeProperty ;
+  rdfs:comment "A n-ary operator is associated to or prefixes an expression. Alternative to the ANDStmt, ORStmt and NOTStmt as nodes." ;
+  rdfs:label "logic operator name" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:mapsTo
+  a owl:AnnotationProperty ;
+  rdfs:comment "An entity in one ontology may map to another ontology. Doesn't imply they're semantically the same and is different from instantiates. It is transitive. An item can map to a string or an entity. " ;
+  rdfs:label "maps to"@en ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:maxIncluded
+  a owl:DatatypeProperty ;
+  rdfs:comment "whether the interval is open or not in the max side" ;
+  rdfs:domain :ValueInterval ;
+  rdfs:label "max included" ;
+  rdfs:range xsd:boolean ;
+  rdfs:subPropertyOf :valueIntervalAttribute ;
+.
+:maxValue
+  a owl:DatatypeProperty ;
+  rdfs:comment "the maximum value of a value interval" ;
+  rdfs:domain :ValueInterval ;
+  rdfs:label "max value" ;
+  rdfs:subPropertyOf :valueIntervalAttribute ;
+.
+:metaAnnotation
+  a owl:AnnotationProperty ;
+  rdfs:comment "Annotations that describe domains and ranges of domain entity properties have. " ;
+  rdfs:label "meta annotation" ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:minIncluded
+  a owl:DatatypeProperty ;
+  rdfs:comment "whether the interval is open or not in the min side" ;
+  rdfs:domain :ValueInterval ;
+  rdfs:label "min included" ;
+  rdfs:range xsd:boolean ;
+  rdfs:subPropertyOf :valueIntervalAttribute ;
+.
+:minValue
+  a owl:DatatypeProperty ;
+  rdfs:comment "the minimum value of a value interval" ;
+  rdfs:domain :ValueInterval ;
+  rdfs:label "min value" ;
+  rdfs:subPropertyOf :valueIntervalAttribute ;
+.
+:modality
+  a owl:AnnotationProperty ;
+  rdfs:comment "Whether something is actual or possible, mandatory or optional, present or hypothetical. E.g., a computer battery HAS THE POSSIBILITY OF being depleted, versus my computer battery IS depleted. " ;
+  rdfs:label "modality" ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:optional
+  a owl:AnnotationProperty ;
+  rdfs:comment "Whether an item is optional" ;
+  rdfs:label "optional" ;
+  rdfs:range xsd:boolean ;
+  rdfs:subPropertyOf :modality ;
+.
+:parameterTxt
+  a owl:DatatypeProperty ;
+  rdfs:comment "The text information of the parameter. Usually the order and the id" ;
+  rdfs:comment "The text version of the argument, it may include the order of the parameter" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "parameter text" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+  rdfs:subPropertyOf :textInfo ;
+.
+:partOf
+  a owl:ObjectProperty ;
+  rdfs:comment "meronymy" ;
+  rdfs:label "partOf" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+  owl:inverseOf :hasPart ;
+.
+:person_utterance
+  a owl:DatatypeProperty ;
+  rdfs:comment "the person associated to the utterance" ;
+  rdfs:label "person utterance" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:probabilityNum
+  a owl:AnnotationProperty ;
+  rdfs:comment "a numeric probability. " ;
+  rdfs:label "numeric probability" ;
+  rdfs:range xsd:float ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:processData
+  a owl:DatatypeProperty ;
+  rdfs:comment "data associated to process objects" ;
+  rdfs:label "process data" ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:provenance
+  a owl:AnnotationProperty ;
+  rdfs:comment "the provenance for a given statement or class. Provenance can be added to any entity or meta-entity" ;
+  rdfs:label "provenance" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:provenanceKB
+  a owl:AnnotationProperty ;
+  rdfs:comment "A single provenance marker for provenance knowledge bases without ids. The marker should be consistently used for all entities from a single KB. " ;
+  rdfs:label "provenance KB" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :provenance ;
+.
+:proxyOf
+  a owl:AnnotationProperty ;
+  :alias "list proxy of" ;
+  rdfs:comment "A schema step or a process step represents another statement in a list" ;
+  rdfs:domain :SchemaStep ;
+  rdfs:label "proxy of" ;
+  rdfs:subPropertyOf :mapsTo ;
+.
+:qConfidence
+  a owl:AnnotationProperty ;
+  rdfs:comment "a confidence measure associated to ANY expression qualifier" ;
+  rdfs:domain :Qualifier ;
+  rdfs:label "qConfidence" ;
+  rdfs:subPropertyOf :qualifierAttribute ;
+.
+:qualifierAttribute
+  a owl:AnnotationProperty ;
+  rdfs:comment "The attributes of a qualifier" ;
+  rdfs:domain :Qualifier ;
+  rdfs:label "qualifier attribute" ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:qualifierProvenance
+  a owl:AnnotationProperty ;
+  rdfs:comment "the source or agent that has the knowledge" ;
+  rdfs:domain :Qualifier ;
+  rdfs:label "qualifier provenance" ;
+  rdfs:subPropertyOf :provenance ;
+  rdfs:subPropertyOf :qualifierAttribute ;
+.
+:qualifierType
+  a owl:AnnotationProperty ;
+  rdfs:comment "The type of a qualifier " ;
+  rdfs:domain :Qualifier ;
+  rdfs:label "qualifier type" ;
+  rdfs:subPropertyOf :qualifierAttribute ;
+.
+:qualifierValue
+  a owl:AnnotationProperty ;
+  rdfs:comment "The value of a qualifier " ;
+  rdfs:domain :Qualifier ;
+  rdfs:label "qualifier value" ;
+  rdfs:subPropertyOf :qualifierAttribute ;
+.
+:rest
+  a owl:ObjectProperty ;
+  rdfs:comment "coupled with first, it implements an rdf:lisr" ;
+  rdfs:label "rest" ;
+  rdfs:subPropertyOf :hasComponent ;
+.
+:roleCardinality
+  a owl:DatatypeProperty ;
+  rdfs:comment "Role cardinality can be a numeral, '+' or '*'. Must be interpreted by the underlying application. " ;
+  rdfs:label "role cardinality" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:roleChoice
+  a owl:DatatypeProperty ;
+  rdfs:comment "Whether the role is mandatory or optional. The default is mandatory. " ;
+  rdfs:label "role choice" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:roleList
+  a owl:DatatypeProperty ;
+  rdfs:comment "the list of roles associated to a frame" ;
+  rdfs:label "role list" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:roleName
+  a owl:DatatypeProperty ;
+  rdfs:comment "The name of a role variable as it pertains to a particular schema" ;
+  rdfs:label "role name" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :varName ;
+.
+:sameReferentAs
+  a owl:AnnotationProperty ;
+  rdfs:comment "Two instances refer to the same item in the domain of discourse" ;
+  rdfs:domain :DomainEntity ;
+  rdfs:label "same referent as" ;
+  rdfs:range :DomainEntity ;
+  rdfs:subPropertyOf :mapsTo ;
+  owl:inverseOf :sameReferentAs ;
+.
+:schemaHasInstance
+  a owl:ObjectProperty ;
+  rdfs:comment "A frame is an instantiation of a schema" ;
+  rdfs:domain :Schema ;
+  rdfs:label "schema has instance" ;
+  rdfs:subPropertyOf :instantiates ;
+  owl:inverseOf :instanceOfSchema ;
+.
+:selectionalRestrictionList
+  a owl:DatatypeProperty ;
+  rdfs:comment "list of selectional restrictions" ;
+  rdfs:label "selectional restriction list" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:sentimentPolarity
+  a owl:DatatypeProperty ;
+  rdfs:comment "Whether a term indicates expresses a positive or nagative polarity of feeling. " ;
+  rdfs:domain :LinguisticClass ;
+  rdfs:label "sentiment polarity" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:shortName
+  a owl:AnnotationProperty ;
+  :alias "short version" ;
+  rdfs:comment "The short name or version of a Namespace. It can be used for other purposes too" ;
+  rdfs:label "short name" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :identifier ;
+.
+:stagingStatus
+  a owl:AnnotationProperty ;
+  rdfs:comment "What state the entity (instance or property) . The default is verified. " ;
+  rdfs:label "staging status" ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "non verified"
+          "verified"
+        ) ;
+    ] ;
+  rdfs:subPropertyOf :topAnnotationProperty ;
+.
+:statementAttributeProperty
+  a owl:ObjectProperty ;
+  rdfs:comment "Property between statements (e.g., schemas, logical statements, etc. )" ;
+  rdfs:label "statement attribute property" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:statementDataProp
+  a owl:DatatypeProperty ;
+  rdfs:comment "data associated to statements" ;
+  rdfs:label "statement data property" ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:statementDescribedBy
+  a owl:ReflexiveProperty ;
+  a owl:SymmetricProperty ;
+  a owl:TransitiveProperty ;
+  :alias "described by pattern" ;
+  :alias "described by" ;
+  rdfs:comment "A statement is described by an expression" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "statement described by"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:stepOf
+  a owl:ObjectProperty ;
+  rdfs:comment "A process step may be associated to one or more statements. " ;
+  rdfs:label "step of statement" ;
+  rdfs:subPropertyOf :componentOf ;
+  owl:inverseOf :hasStep ;
+.
+:stmtText
+  a owl:DatatypeProperty ;
+  rdfs:comment "The text version of the statement " ;
+  rdfs:label "stmt text" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :textInfo ;
+.
+:stringValue
+  a owl:DatatypeProperty ;
+  rdfs:comment "the value in a value pair" ;
+  rdfs:domain :ValuePair ;
+  rdfs:label "string value" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:subConceptOf
+  a owl:TransitiveProperty ;
+  rdfs:comment "A is a subconcept of B if all instances in A are also in B or, in other words, B is a hypernim of A. It should be used as both IS-A (rdfs:subClassOf) and has type (rdf:type)" ;
+  rdfs:label "subconcept of"@en ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:syntacticExpression
+  a owl:DatatypeProperty ;
+  rdfs:comment "A syntactic expression is the sentence version of a syntactic form" ;
+  rdfs:label "syntactic expression" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:template
+  a owl:DatatypeProperty ;
+  rdfs:comment "The template associated to a statement " ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "template" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:textContent
+  a owl:DatatypeProperty ;
+  rdfs:comment "the text associated to a document" ;
+  rdfs:label "text content" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :documentDataProp ;
+.
+:textInfo
+  a owl:DatatypeProperty ;
+  rdfs:comment "Text info in the domain for an instance as opposed to rdfs:comment, which is a metadata property, applicable to all elements (classes, instances, etc.)." ;
+  rdfs:label "text info" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:title
+  a owl:DatatypeProperty ;
+  rdfs:comment "The title of a document or a document section " ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :documentDataProp ;
+.
+:toReferentObjProp
+  a owl:ObjectProperty ;
+  rdfs:comment "Property between a statement concept (e.g., variable,  schema, logical statement) and its referent (a domain entity or maybe another statement concept)" ;
+  rdfs:label "to referent object property" ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:topAnnotationProperty
+  a owl:AnnotationProperty ;
+  rdfs:comment "Annotations can be used everywhere, in classes, relation definitions or instances" ;
+  rdfs:domain :Base ;
+  rdfs:label "top annotation property" ;
+  rdfs:subPropertyOf owl:topAnnotationProperty ;
+.
+:topDataProperty
+  a owl:DatatypeProperty ;
+  rdfs:comment "The top data property for this ontology. " ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "top data property" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:topObjectProperty
+  a owl:ObjectProperty ;
+  rdfs:comment "the top object property. " ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "top object property" ;
+  rdfs:range owl:Thing ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:typeName
+  a owl:DatatypeProperty ;
+  rdfs:comment "the name of the type in a value pair" ;
+  rdfs:domain :ValuePair ;
+  rdfs:label "type name" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:usesVariable
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between an expression and a variable" ;
+  rdfs:domain :LogicTerm ;
+  rdfs:label "uses variable"@en ;
+  rdfs:range :Variable ;
+  rdfs:subPropertyOf :topObjectProperty ;
+.
+:valueIntervalAttribute
+  a owl:DatatypeProperty ;
+  rdfs:comment "The attributes of a qualifier" ;
+  rdfs:domain :ValueInterval ;
+  rdfs:label "qualifier attribute" ;
+  rdfs:subPropertyOf :topDataProperty ;
+.
+:varExpression
+  a owl:DatatypeProperty ;
+  rdfs:comment "the expression for the variable as represented in the underlying language" ;
+  rdfs:domain :Variable ;
+  rdfs:label "var expression" ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:varName
+  a owl:DatatypeProperty ;
+  rdfs:comment "The name of a variable as it's referenced in a particular schema" ;
+  rdfs:label "variable name" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:varType
+  a owl:DatatypeProperty ;
+  rdfs:comment "the type associated to a variable" ;
+  rdfs:domain :Variable ;
+  rdfs:label "var type" ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:verbe_form
+  a owl:DatatypeProperty ;
+  rdfs:comment "form of a verb (e.g., gerund)" ;
+  rdfs:label "verbe form" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:verbe_tense
+  a owl:DatatypeProperty ;
+  rdfs:comment "tense of a verb" ;
+  rdfs:label "verb tense" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+:voice_of_utterance
+  a owl:DatatypeProperty ;
+  rdfs:comment "voice" ;
+  rdfs:label "voice of utterance" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf :statementDataProp ;
+.
+owl:topAnnotationProperty
+  a owl:AnnotationProperty ;
+  rdfs:comment "The annotation property that provides metadata to classes and properties." ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "top annotation property" ;
+  rdfs:range rdfs:Literal ;
+.
+time:DayOfWeek
+  rdfs:subClassOf :TimeBase ;
+.
+time:TRS
+  rdfs:subClassOf :TimeBase ;
+.
+time:TemporalDuration
+  rdfs:subClassOf :TimeBase ;
+.
+time:TemporalEntity
+  rdfs:subClassOf :TimeBase ;
+.
+time:TemporalPosition
+  rdfs:subClassOf :TimeBase ;
+.
+time:TimeZone
+  rdfs:subClassOf :TimeBase ;
+.
