@@ -1,7 +1,7 @@
 # ULKB #
 
 The Universal Logic Knowledge Base (ULKB) is a HOL-based framework for
-accessing and reasoning over knowledge graphs.
+reasoning over knowledge graphs.
 
 It consists of two main components:
 
