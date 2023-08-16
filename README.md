@@ -8,7 +8,7 @@ It consists of two main components:
 1. **ULKB Logic**. A higher-order logic (HOL) language and interactive
    theorem-prover like environment for reasoning over knowledge graphs.
 
-2. **ULKB Graph**.  A core knowledge graph in augmented by a federation of
+2. **ULKB Graph**.  A core knowledge graph augmented by a federation of
    external knowledge bases.
 
 This repository contains the source code of ULKB Logic (i.e., the Python
