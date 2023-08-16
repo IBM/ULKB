@@ -11,12 +11,12 @@ It consists of two main components:
 2. **ULKB Graph**.  A core knowledge graph in augmented by a federation of
    external knowledge bases.
 
-This repository contains the source code of ULKB Logic (the Python library
-`ulkb`). Code examples and tutorials can be found under
+This repository contains the source code of ULKB Logic (i.e., the Python
+library `ulkb`). Code examples and tutorials can be found under
 [examples](./examples).  For more detailed documentation, see the [Reference
 Manual](https://github.ibm/IBM/ULKB/).
 
-(The ontology files of the ULKB Graph can be found under [graph](./graph)).
+(The ontology files of the ULKB Graph can be found under [graph](./graph).
 The ULKB Logic code does not depend on these files.)
 
 ## Directory structure ##
