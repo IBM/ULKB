@@ -1,8 +1,49 @@
-# Universal Logic Knowledge Base
-The Universal Logic Knowledge Base (ULKB) is a system and framework that integrates various linguistic and commonsense knowledge bases (KBs) under a single, virtual knowledge graph.
+# ULKB #
 
--- rdf_owl_files : The current deliverable ULKB V6 includes the ontology/graph rdf-owl files in Turtle (.ttl) format. We are sharing the linked lexical KBs. These graphs can be installed in any triplestore (AllegroGraph, Virtuoso, Blazegraph, Jena, etc.) and queried using SPARQL. The ontologic knowledge will be posted shortly in the V7 version and we will share an API to access simple queries directly. 
+The Universal Logic Knowledge Base (ULKB) is a HOL-based framework for
+accessing and reasoning over knowledge graphs.
 
--- doc : contains sample SPARQL queries (in a Jupyter notebook) and documentation of the current deliverable. 
+It consists of two main components:
 
-The ULKB White Paper (under work) contains more information. You can find it at https://ibm.box.com/s/fig8ccd0j951eetpabhcywqhspml0w81
+1. **ULKB Logic**. A higher-order logic (HOL) language and interactive
+   theorem-prover like environment for reasoning over knowledge graphs.
+
+2. **ULKB Graph**.  A core knowledge graph in augmented by a federation of
+   external knowledge bases.
+
+This repository contains the source code of ULKB Logic (the Python library
+`ulkb`). Code examples and tutorials can be found under
+[examples](./examples).  For more detailed documentation, see the [Reference
+Manual](https://github.ibm/IBM/ULKB/).
+
+(The ontology files of the ULKB Graph can be found under [graph](./graph)).
+The ULKB Logic code does not depend on these files.)
+
+## Directory structure ##
+
+- [docs](./docs): Reference manual.
+- [docs_src](./docs_src): Reference manual sources.
+- [examples](./examples): Code examples and tutorials.
+- [graph](./graph): Ontology files and graph generation code.
+- [tests](./tests): Testing code.
+- [ulkb](./ulkb): `ulkb` library sources.
+
+## Installation ##
+
+```shell
+$ git clone https://github.com/IBM/ULKB
+$ cd ULKB
+$ pip install -e .
+```
+
+## Testing ##
+
+Install the test dependencies:
+```shell
+$ make install-deps
+```
+
+Run all tests:
+```shell
+$ make check
+```

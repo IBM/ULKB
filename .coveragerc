@@ -1,0 +1,12 @@
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    def __str__
+    raise AssertionError
+    raise NotImplementedError
+    if 0:
+    if __name__ == .__main__.:
+    class .*Protocol\):
+    @(abc\.)?abstractmethod
+    should_not_get_here

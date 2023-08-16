@@ -1,0 +1,299 @@
+// Syntax: <https://www.w3.org/TR/owl2-syntax/#Appendix:_Complete_Grammar_.28Normative.29>
+// Semantics: <https://www.w3.org/TR/owl2-direct-semantics/>
+
+// General definitions
+
+non_negative_integer: INT
+quoted_string: STRING
+?language_tag: "@" NAME
+!node_id: "_:" NAME
+
+full_iri: IRI
+!prefix_name: [NAME] ":"
+abbreviated_iri: prefix_name NAME
+?iri: full_iri | abbreviated_iri
+
+ontology_document: prefix_declaration* ontology
+prefix_declaration: "Prefix" "(" prefix_name "=" full_iri ")"
+ontology: "Ontology" "(" (ontology_iri version_iri?)? directly_imports_documents ontology_annotations axioms ")"
+ontology_iri: iri
+version_iri: iri
+directly_imports_documents: ("Import" "(" iri ")")*
+ontology_annotations: annotation*
+axioms: axiom*
+
+declaration: "Declaration" "(" axiom_annotations entity ")"
+?entity: "Class" "(" class_cons ")"
+       | "Datatype" "(" datatype_cons ")"
+       | "ObjectProperty" "(" object_property_cons ")"
+       | "DataProperty" "(" data_property_cons ")"
+       | "AnnotationProperty" "(" annotation_property ")" -> discard
+       | "NamedIndividual" "(" individual_cons ")"
+
+?annotation_subject: iri | anonymous_individual
+?annotation_value: anonymous_individual | iri | literal
+axiom_annotations: annotation*
+
+annotation: "Annotation" "(" annotation_annotations annotation_property annotation_value ")"
+annotation_annotations: annotation* -> discard
+
+?annotation_axiom: annotation_assertion
+                 | sub_annotation_property_of -> discard
+                 | annotation_property_domain -> discard
+                 | annotation_property_range -> discard
+
+annotation_assertion: "AnnotationAssertion" "(" axiom_annotations annotation_property annotation_subject annotation_value ")"
+
+sub_annotation_property_of: "SubAnnotationPropertyOf" "(" axiom_annotations sub_annotation_property super_annotation_property ")"
+?sub_annotation_property: annotation_property
+?super_annotation_property: annotation_property
+
+annotation_property_domain: "AnnotationPropertyDomain" "(" axiom_annotations annotation_property iri ")"
+
+annotation_property_range: "AnnotationPropertyRange" "(" axiom_annotations annotation_property iri ")"
+
+// OWL2 Constructs
+
+class_cons: class
+?class: iri
+
+datatype_cons: datatype
+?datatype: iri
+
+object_property_cons: object_property
+?object_property: iri
+
+data_property_cons: data_property
+?data_property: iri
+
+?annotation_property: iri
+
+individual_cons: individual
+?individual: named_individual | anonymous_individual
+
+?named_individual: iri
+
+?anonymous_individual: node_id
+
+literal_cons: literal
+?literal: typed_literal
+        | string_literal_no_language
+        | string_literal_with_language
+typed_literal: lexical_form "^^" datatype
+?lexical_form: quoted_string
+string_literal_no_language: quoted_string
+string_literal_with_language: quoted_string language_tag
+
+?object_property_expression: object_property_cons
+                           | inverse_object_property
+
+inverse_object_property: "ObjectInverseOf" "(" object_property_cons ")"
+
+?data_property_expression: data_property_cons
+
+?data_range: datatype_cons
+           | data_intersection_of
+           | data_union_of
+           | data_complement_of
+           | data_one_of
+           | datatype_restriction
+
+data_intersection_of: "DataIntersectionOf" "(" data_range data_range+ ")"
+
+data_union_of: "DataUnionOf" "(" data_range data_range+ ")"
+
+data_complement_of: "DataComplementOf" "(" data_range ")"
+
+data_one_of: "DataOneOf" "(" literal_cons+ ")"
+
+datatype_restriction: "DatatypeRestriction" "(" datatype_cons (constraining_facet restriction_value)+ ")"
+?constraining_facet: iri -> discard
+?restriction_value: literal -> discard
+
+?class_expression: class_cons
+                 | object_intersection_of
+                 | object_union_of
+                 | object_complement_of
+                 | object_one_of
+                 | object_some_values_from
+                 | object_all_values_from
+                 | object_has_value
+                 | object_has_self
+                 | object_min_cardinality
+                 | object_max_cardinality
+                 | object_exact_cardinality
+                 | data_some_values_from
+                 | data_all_values_from
+                 | data_has_value
+                 | data_min_cardinality
+                 | data_max_cardinality
+                 | data_exact_cardinality
+
+object_intersection_of: "ObjectIntersectionOf" "(" class_expression class_expression+ ")"
+
+object_union_of: "ObjectUnionOf" "(" class_expression class_expression+ ")"
+
+object_complement_of: "ObjectComplementOf" "(" class_expression ")"
+
+object_one_of: "ObjectOneOf" "(" individual_cons+ ")"
+
+object_some_values_from: "ObjectSomeValuesFrom" "(" object_property_expression class_expression ")"
+
+object_all_values_from: "ObjectAllValuesFrom" "(" object_property_expression class_expression ")"
+
+object_has_value: "ObjectHasValue" "(" object_property_expression individual_cons ")"
+
+object_has_self: "ObjectHasSelf" "(" object_property_expression ")"
+
+object_min_cardinality: "ObjectMinCardinality" "(" non_negative_integer object_property_expression [class_expression] ")"
+
+object_max_cardinality: "ObjectMaxCardinality" "(" non_negative_integer object_property_expression [class_expression] ")"
+
+object_exact_cardinality: "ObjectExactCardinality" "(" non_negative_integer object_property_expression [class_expression] ")"
+
+data_some_values_from: "DataSomeValuesFrom" "(" data_property_expression+ data_range ")"
+
+data_all_values_from: "DataAllValuesFrom" "(" data_property_expression+ data_range ")"
+
+data_has_value: "DataHasValue" "(" data_property_expression literal_cons ")"
+
+data_min_cardinality: "DataMinCardinality" "(" non_negative_integer data_property_expression [data_range] ")"
+
+data_max_cardinality: "DataMaxCardinality" "(" non_negative_integer data_property_expression [data_range] ")"
+
+data_exact_cardinality: "DataExactCardinality" "(" non_negative_integer data_property_expression [data_range] ")"
+
+?axiom: declaration
+      | class_axiom
+      | object_property_axiom
+      | data_property_axiom
+      | datatype_definition
+      | has_key
+      | assertion
+      | annotation_axiom
+
+?class_axiom: sub_class_of
+            | equivalent_classes
+            | disjoint_classes
+            | disjoint_union
+
+sub_class_of: "SubClassOf" "(" axiom_annotations sub_class_expression super_class_expression ")"
+?sub_class_expression: class_expression
+?super_class_expression: class_expression
+
+equivalent_classes: "EquivalentClasses" "(" axiom_annotations class_expression class_expression+ ")"
+
+disjoint_classes: "DisjointClasses" "(" axiom_annotations class_expression class_expression+ ")"
+
+disjoint_union: "DisjointUnion" "(" axiom_annotations class_cons class_expression class_expression+ ")"
+
+?object_property_axiom: sub_object_property_of
+                      | equivalent_object_properties
+                      | disjoint_object_properties
+                      | inverse_object_properties
+                      | object_property_domain
+                      | object_property_range
+                      | functional_object_property
+                      | inverse_functional_object_property
+                      | reflexive_object_property
+                      | irreflexive_object_property
+                      | symmetric_object_property
+                      | asymmetric_object_property
+                      | transitive_object_property
+
+sub_object_property_of: "SubObjectPropertyOf" "(" axiom_annotations sub_object_property_expression super_object_property_expression ")"
+?sub_object_property_expression: object_property_expression
+                               | property_expression_chain
+property_expression_chain: "ObjectPropertyChain" "(" object_property_expression object_property_expression+ ")"
+?super_object_property_expression: object_property_expression
+
+equivalent_object_properties: "EquivalentObjectProperties" "(" axiom_annotations object_property_expression object_property_expression+ ")"
+
+disjoint_object_properties: "DisjointObjectProperties" "(" axiom_annotations object_property_expression object_property_expression+ ")"
+
+inverse_object_properties: "InverseObjectProperties" "(" axiom_annotations object_property_expression object_property_expression ")"
+
+object_property_domain: "ObjectPropertyDomain" "(" axiom_annotations object_property_expression class_expression ")"
+
+object_property_range: "ObjectPropertyRange" "(" axiom_annotations object_property_expression class_expression ")"
+
+functional_object_property: "FunctionalObjectProperty" "(" axiom_annotations object_property_expression ")"
+
+inverse_functional_object_property: "InverseFunctionalObjectProperty" "(" axiom_annotations object_property_expression ")"
+
+reflexive_object_property: "ReflexiveObjectProperty" "(" axiom_annotations object_property_expression ")"
+
+irreflexive_object_property: "IrreflexiveObjectProperty" "(" axiom_annotations object_property_expression ")"
+
+symmetric_object_property: "SymmetricObjectProperty" "(" axiom_annotations object_property_expression ")"
+
+asymmetric_object_property: "AsymmetricObjectProperty" "(" axiom_annotations object_property_expression ")"
+
+transitive_object_property: "TransitiveObjectProperty" "(" axiom_annotations object_property_expression ")"
+
+?data_property_axiom: sub_data_property_of
+                    | equivalent_data_properties
+                    | disjoint_data_properties
+                    | data_property_domain
+                    | data_property_range
+                    | functional_data_property
+
+sub_data_property_of: "SubDataPropertyOf" "(" axiom_annotations sub_data_property_expression super_data_property_expression ")"
+?sub_data_property_expression: data_property_expression
+?super_data_property_expression: data_property_expression
+
+equivalent_data_properties: "EquivalentDataProperties" "(" axiom_annotations data_property_expression data_property_expression+ ")"
+
+disjoint_data_properties: "DisjointDataProperties" "(" axiom_annotations data_property_expression data_property_expression+ ")"
+
+data_property_domain: "DataPropertyDomain" "(" axiom_annotations data_property_expression class_expression ")"
+
+data_property_range: "DataPropertyRange" "(" axiom_annotations data_property_expression data_range ")"
+
+functional_data_property: "FunctionalDataProperty" "(" axiom_annotations data_property_expression ")"
+
+datatype_definition: "DatatypeDefinition" "(" axiom_annotations datatype_cons data_range ")"
+
+has_key: "HasKey" "(" axiom_annotations class_expression "(" object_property_expression_has_key ")" "(" data_property_expression_has_key ")" ")"
+object_property_expression_has_key: object_property_expression*
+data_property_expression_has_key: data_property_expression*
+
+?assertion: same_individual
+          | different_individuals
+          | class_assertion
+          | object_property_assertion
+          | negative_object_property_assertion
+          | data_property_assertion
+          | negative_data_property_assertion
+
+?source_individual: individual_cons
+?target_individual: individual_cons
+?target_value: literal_cons
+
+same_individual: "SameIndividual" "(" axiom_annotations individual_cons individual_cons+ ")"
+
+different_individuals: "DifferentIndividuals" "(" axiom_annotations individual_cons individual_cons+ ")"
+
+class_assertion: "ClassAssertion" "(" axiom_annotations class_expression individual_cons ")"
+
+object_property_assertion: "ObjectPropertyAssertion" "(" axiom_annotations object_property_expression source_individual target_individual ")"
+
+negative_object_property_assertion: "NegativeObjectPropertyAssertion" "(" axiom_annotations object_property_expression source_individual target_individual ")"
+
+data_property_assertion: "DataPropertyAssertion" "(" axiom_annotations data_property_expression source_individual target_value ")"
+
+negative_data_property_assertion: "NegativeDataPropertyAssertion" "(" axiom_annotations data_property_expression source_individual target_value ")"
+
+// Terminals
+
+DIGIT: "0".."9"
+INT: DIGIT+
+STRING: /("(?!"").*?(?<!\\)(\\\\)*?"|'(?!'').*?(?<!\\)(\\\\)*?')/is
+WS: /[ \t\f\r\n]/+
+
+NAME: /[a-zA-Z_][-\w]*/
+IRI: "<" /.*?/ ">"
+COMMENT: /#[^\n]*/
+
+%ignore COMMENT
+%ignore WS
