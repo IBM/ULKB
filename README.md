@@ -14,7 +14,7 @@ It consists of two main components:
 This repository contains the source code of ULKB Logic (i.e., the Python
 library `ulkb`). Code examples and tutorials can be found under
 [examples](./examples).  For more detailed documentation, see the [Reference
-Manual](https://github.ibm/IBM/ULKB/).
+Manual](https://github.com/IBM/ULKB/).
 
 (The ontology files of the ULKB Graph can be found under [graph](./graph).
 The ULKB Logic code does not depend on these files.)
