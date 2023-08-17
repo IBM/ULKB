@@ -644,8 +644,8 @@ class SerializerULKB(
 
     def _write_ensuring_ascii(self, text):
         if self.ensure_ascii:
-            self._write(
-                str(text).encode('raw_Unicode_escape').decode('ascii'))
+            self._write(text.encode(
+                'ascii', 'backslashreplace').decode('ascii'))
         else:
             self._write(text)
 
