@@ -25,6 +25,7 @@ CHECK_DEPS?= htmlcov-clean
 CHECK_ISORT?= yes
 CHECK_MYPY?= yes
 COVERAGERC?= .coveragerc
+COVERAGERC_OMIT?=
 DOCS_SRC?= docs
 DOCS_TGT?= .docs
 DOCS_TGT_BRANCH?= gh-pages
@@ -169,6 +170,7 @@ gen-all: gen-coveragerc gen-flake8rc gen-manifest-in gen-pytest-ini gen-tox-ini
 gen-coveragerc:
 	@echo 'generating ${COVERAGERC}'
 	@echo '[report]' >${COVERAGERC}
+	@echo 'omit = ${COVERAGERC_OMIT}' >>${COVERAGERC}
 	@echo 'exclude_lines =' >>${COVERAGERC}
 	@echo '    pragma: no cover' >>${COVERAGERC}
 	@echo '    def __repr__' >>${COVERAGERC}
