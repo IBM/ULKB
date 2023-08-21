@@ -25,8 +25,9 @@ CHECK_DEPS?= htmlcov-clean
 CHECK_ISORT?= yes
 CHECK_MYPY?= yes
 COVERAGERC?= .coveragerc
-DOCS_SRC?= docs_src
-DOCS_TGT?= docs
+DOCS_SRC?= docs
+DOCS_TGT?= .docs
+DOCS_TGT_BRANCH?= gh-pages
 FLAKE8RC?= .flake8rc
 ISORT_OPTIONS?= --check --diff
 MANIFEST_IN?= Manifest.in
@@ -127,21 +128,37 @@ docs:
 	 PACKAGE='${PACKAGE}'\
 	 COPYRIGHT='${COPYRIGHT}'\
 	 COPYRIGHT_START_YEAR='${COPYRIGHT_START_YEAR}'
-	@echo 'Index: file://${PWD}/docs_src/_build/html/index.html'
+	@echo 'Index: file://${PWD}/${DOCS_SRC}/_build/html/index.html'
 
 .PHONY: docs-clean
 docs-clean:
 	${MAKE} -C ./${DOCS_SRC} clean
 	-rm -rf ./${DOCS_SRC}/generated
 
+# initialize docs branch
+.PHONY: docs-init
+docs-init:
+	if ! test -d ${DOCS_TGT}; then\
+	 mkdir -p ${DOCS_TGT};\
+	 cd ${DOCS_TGT};\
+	 git init;\
+	 git checkout --orphan ${DOCS_TGT_BRANCH};\
+	 git remote add origin ${URL_SSH};\
+	fi
+	-cd ${DOCS_TGT} && git pull origin ${DOCS_TGT_BRANCH}
+
 # build docs and copy them to ${DOCS_TGT}
 .PHONY: docs-publish
 docs-publish: docs-clean docs
-	${MAKE} -C ./${DOCS_SRC} html
-	rm -rf ./${DOCS_TGT}/
-	mkdir -p ./${DOCS_TGT}
+	@if ! test -d ./${DOCS_TGT}; then\
+	 echo 1>&2 "*** ERROR: ${DOCS_TGT} does not exist";\
+	 exit 1;\
+	fi
 	touch ./${DOCS_TGT}/.nojekyll
-	cp -a ./${DOCS_SRC}/_build/html ./${DOCS_TGT}
+	cp -a ./${DOCS_SRC}/_build/html/* ./${DOCS_TGT}
+	cd ${DOCS_TGT} && git add .
+	cd ${DOCS_TGT} && git commit -m 'Update docs'
+	cd ${DOCS_TGT} && git push origin gh-pages
 
 # run all gen-* targets
 .PHONY: gen-all

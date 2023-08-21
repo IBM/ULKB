@@ -2,6 +2,7 @@
 *~
 .coverage
 .tox
+/.docs
 /build
 /venv
 __pycache__
