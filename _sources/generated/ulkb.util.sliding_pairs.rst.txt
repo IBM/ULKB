@@ -1,0 +1,6 @@
+﻿ulkb.util.sliding\_pairs
+========================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: sliding_pairs

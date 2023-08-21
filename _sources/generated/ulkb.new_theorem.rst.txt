@@ -1,0 +1,6 @@
+﻿ulkb.new\_theorem
+=================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: new_theorem

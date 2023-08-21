@@ -1,0 +1,6 @@
+﻿ulkb.util.foldr\_infix
+======================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: foldr_infix

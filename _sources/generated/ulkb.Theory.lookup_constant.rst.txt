@@ -1,0 +1,6 @@
+﻿ulkb.Theory.lookup\_constant
+============================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.lookup_constant

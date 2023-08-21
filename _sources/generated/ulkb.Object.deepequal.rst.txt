@@ -1,0 +1,6 @@
+﻿ulkb.Object.deepequal
+=====================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.deepequal

@@ -1,0 +1,6 @@
+﻿ulkb.util.match\_last
+=====================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: match_last

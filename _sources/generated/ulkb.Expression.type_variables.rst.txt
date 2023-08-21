@@ -1,0 +1,6 @@
+﻿ulkb.Expression.type\_variables
+===============================
+
+.. currentmodule:: ulkb
+
+.. autoproperty:: Expression.type_variables

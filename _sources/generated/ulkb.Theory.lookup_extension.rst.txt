@@ -1,0 +1,6 @@
+﻿ulkb.Theory.lookup\_extension
+=============================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.lookup_extension

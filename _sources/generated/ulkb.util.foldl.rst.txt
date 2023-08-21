@@ -1,0 +1,6 @@
+﻿ulkb.util.foldl
+===============
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: foldl

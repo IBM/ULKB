@@ -1,0 +1,6 @@
+﻿ulkb.TheorySettings.debug
+=========================
+
+.. currentmodule:: ulkb
+
+.. autoproperty:: TheorySettings.debug

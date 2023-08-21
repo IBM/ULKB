@@ -1,0 +1,6 @@
+﻿ulkb.Object.convert\_from
+=========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.convert_from

@@ -1,0 +1,6 @@
+﻿ulkb.util.foldl1\_args
+======================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: foldl1_args

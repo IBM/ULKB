@@ -1,0 +1,6 @@
+﻿ulkb.Object.dump
+================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.dump

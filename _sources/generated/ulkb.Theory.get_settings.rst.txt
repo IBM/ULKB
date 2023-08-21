@@ -1,0 +1,6 @@
+﻿ulkb.Theory.get\_settings
+=========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.get_settings

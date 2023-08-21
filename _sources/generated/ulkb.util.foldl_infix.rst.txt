@@ -1,0 +1,6 @@
+﻿ulkb.util.foldl\_infix
+======================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: foldl_infix

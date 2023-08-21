@@ -1,0 +1,6 @@
+﻿ulkb.new\_base\_type
+====================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: new_base_type

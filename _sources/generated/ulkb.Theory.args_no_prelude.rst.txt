@@ -1,0 +1,6 @@
+﻿ulkb.Theory.args\_no\_prelude
+=============================
+
+.. currentmodule:: ulkb
+
+.. autoproperty:: Theory.args_no_prelude

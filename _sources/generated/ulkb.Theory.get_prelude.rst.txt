@@ -1,0 +1,6 @@
+﻿ulkb.Theory.get\_prelude
+========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.get_prelude

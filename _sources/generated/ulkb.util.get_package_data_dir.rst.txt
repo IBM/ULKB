@@ -1,0 +1,6 @@
+﻿ulkb.util.get\_package\_data\_dir
+=================================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: get_package_data_dir

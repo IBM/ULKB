@@ -1,0 +1,6 @@
+﻿ulkb.show\_python\_type\_aliases
+================================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: show_python_type_aliases

@@ -1,0 +1,6 @@
+﻿ulkb.Object.unpack\_theory\_unsafe
+==================================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.unpack_theory_unsafe

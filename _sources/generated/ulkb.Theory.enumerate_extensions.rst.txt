@@ -1,0 +1,6 @@
+﻿ulkb.Theory.enumerate\_extensions
+=================================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.enumerate_extensions

@@ -1,0 +1,6 @@
+﻿ulkb.Theory.settings
+====================
+
+.. currentmodule:: ulkb
+
+.. autoproperty:: Theory.settings

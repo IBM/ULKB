@@ -1,0 +1,6 @@
+﻿ulkb.Object.unpack\_object
+==========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.unpack_object

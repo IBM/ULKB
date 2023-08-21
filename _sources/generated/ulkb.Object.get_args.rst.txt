@@ -1,0 +1,6 @@
+﻿ulkb.Object.get\_args
+=====================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.get_args

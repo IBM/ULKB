@@ -1,0 +1,6 @@
+﻿ulkb.Object.hexdigest
+=====================
+
+.. currentmodule:: ulkb
+
+.. autoproperty:: Object.hexdigest

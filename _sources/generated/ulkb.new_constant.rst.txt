@@ -1,0 +1,6 @@
+﻿ulkb.new\_constant
+==================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: new_constant

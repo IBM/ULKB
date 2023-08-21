@@ -1,0 +1,53 @@
+﻿ulkb.TheorySettings.graph
+=========================
+
+.. currentmodule:: ulkb
+
+.. autoclass:: TheorySettings.graph
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TheorySettings.graph.__init__
+      ~TheorySettings.graph.clear
+      ~TheorySettings.graph.copy
+      ~TheorySettings.graph.deepcopy
+      ~TheorySettings.graph.get
+      ~TheorySettings.graph.items
+      ~TheorySettings.graph.keys
+      ~TheorySettings.graph.pop
+      ~TheorySettings.graph.popitem
+      ~TheorySettings.graph.recursive_items
+      ~TheorySettings.graph.setdefault
+      ~TheorySettings.graph.update
+      ~TheorySettings.graph.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TheorySettings.graph.limit
+      ~TheorySettings.graph.namespaces
+      ~TheorySettings.graph.timeout
+      ~TheorySettings.graph.uri
+      ~TheorySettings.graph.with_description
+      ~TheorySettings.graph.with_description_extra
+      ~TheorySettings.graph.with_description_language
+      ~TheorySettings.graph.with_description_predicate
+      ~TheorySettings.graph.with_description_suffix
+      ~TheorySettings.graph.with_label
+      ~TheorySettings.graph.with_label_extra
+      ~TheorySettings.graph.with_label_language
+      ~TheorySettings.graph.with_label_predicate
+      ~TheorySettings.graph.with_label_suffix
+   
+   

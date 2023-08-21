@@ -1,0 +1,6 @@
+﻿ulkb.util.map\_args
+===================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: map_args

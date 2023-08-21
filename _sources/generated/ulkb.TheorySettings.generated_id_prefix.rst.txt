@@ -1,0 +1,6 @@
+﻿ulkb.TheorySettings.generated\_id\_prefix
+=========================================
+
+.. currentmodule:: ulkb
+
+.. autoattribute:: TheorySettings.generated_id_prefix

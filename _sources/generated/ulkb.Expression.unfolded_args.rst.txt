@@ -1,0 +1,6 @@
+﻿ulkb.Expression.unfolded\_args
+==============================
+
+.. currentmodule:: ulkb
+
+.. autoproperty:: Expression.unfolded_args

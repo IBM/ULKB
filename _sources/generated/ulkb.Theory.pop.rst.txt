@@ -1,0 +1,6 @@
+﻿ulkb.Theory.pop
+===============
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.pop

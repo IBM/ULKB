@@ -1,0 +1,6 @@
+﻿ulkb.lookup\_constant
+=====================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: lookup_constant

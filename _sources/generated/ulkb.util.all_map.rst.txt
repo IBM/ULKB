@@ -1,0 +1,6 @@
+﻿ulkb.util.all\_map
+==================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: all_map

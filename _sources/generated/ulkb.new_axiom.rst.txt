@@ -1,0 +1,6 @@
+﻿ulkb.new\_axiom
+===============
+
+.. currentmodule:: ulkb
+
+.. autofunction:: new_axiom

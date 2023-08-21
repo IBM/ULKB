@@ -1,0 +1,6 @@
+﻿ulkb.Theory.new\_constant
+=========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.new_constant

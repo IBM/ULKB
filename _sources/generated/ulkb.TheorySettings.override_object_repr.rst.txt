@@ -1,0 +1,6 @@
+﻿ulkb.TheorySettings.override\_object\_repr
+==========================================
+
+.. currentmodule:: ulkb
+
+.. autoattribute:: TheorySettings.override_object_repr

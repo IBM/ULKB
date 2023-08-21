@@ -1,0 +1,2043 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ulkb.expression &#8212; ulkb  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/ulkb/expression';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">ulkb  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../object.html">
+                        Object
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../expression.html">
+                        Expression
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../type_constructor.html">
+                        Type constructor
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../type.html">
+                        Type
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../term.html">
+                        Term
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../prelude.html">
+                        Prelude
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../extension.html">
+                        Extension
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../theory.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../commands.html">
+                        Commands
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../conversion.html">
+                        Conversion, parsing, serialization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../more.html">
+                        Appendix: More object methods
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../util.html">
+                        Appendix: Utilities
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../object.html">
+                        Object
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../expression.html">
+                        Expression
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../type_constructor.html">
+                        Type constructor
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../type.html">
+                        Type
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../term.html">
+                        Term
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../prelude.html">
+                        Prelude
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../extension.html">
+                        Extension
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../theory.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../commands.html">
+                        Commands
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../conversion.html">
+                        Conversion, parsing, serialization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../more.html">
+                        Appendix: More object methods
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../util.html">
+                        Appendix: Utilities
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">ulkb.expression</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for ulkb.expression</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2023 IBM Corp.</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
+
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">abstractmethod</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">error</span><span class="p">,</span> <span class="n">util</span>
+<span class="kn">from</span> <span class="nn">.object</span> <span class="kn">import</span> <span class="n">Object</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Abstraction&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Application&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;AtomicTerm&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;BoundVariable&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;CompoundTerm&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Constant&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Expression&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Term&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Type&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;TypeApplication&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;TypeConstructor&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;TypeVariable&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Variable&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="Expression">
+<a class="viewcode-back" href="../../expression.html#ulkb.Expression">[docs]</a>
+<span class="k">class</span> <span class="nc">Expression</span><span class="p">(</span><span class="n">Object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base class for expressions.</span>
+
+<span class="sd">    An :class:`Expression` can be either a :class:`Type` or a :class:`Term`.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       args: Arguments</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Expression`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;_cached_unfolded_args&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_type_constructors&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_type_variables&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__neg__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>          <span class="c1"># FIXME: generalize</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Not</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__invert__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># FIXME: generalize</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Not</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__and__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>   <span class="c1"># FIXME: generalize</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">And</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__rand__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># FIXME: generalize</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">And</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>    <span class="c1"># FIXME: generalize</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Or</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__ror__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>   <span class="c1"># FIXME: generalize</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Or</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_unfolded_args_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the expression arguments unfolded.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_unfolded_args_iterator</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_unfolded_args_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># defaults to args</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Expression.has_type_constructors">
+<a class="viewcode-back" href="../../generated/ulkb.Expression.has_type_constructors.html#ulkb.Expression.has_type_constructors">[docs]</a>
+    <span class="k">def</span> <span class="nf">has_type_constructors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether some type constructor occurs in expression.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type_constructors</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_build_type_constructors_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the set of type constructors occurring in expression.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_type_constructors_iterator</span><span class="p">())</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_get_type_constructors_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+<div class="viewcode-block" id="Expression.has_type_variables">
+<a class="viewcode-back" href="../../generated/ulkb.Expression.has_type_variables.html#ulkb.Expression.has_type_variables">[docs]</a>
+    <span class="k">def</span> <span class="nf">has_type_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether some type variable occurs in expression.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type_variables</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_build_type_variables_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the set of type variables occurring in expression.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_type_variables_iterator</span><span class="p">())</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_get_type_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+<div class="viewcode-block" id="Expression.instantiate">
+<a class="viewcode-back" href="../../generated/ulkb.Expression.instantiate.html#ulkb.Expression.instantiate">[docs]</a>
+    <span class="k">def</span> <span class="nf">instantiate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Applies type-variable instantiation `theta` to expression.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           theta: Dictionary mapping type variables to types.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           The resulting :class:`Expression`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Example:</span>
+
+<span class="sd">           a, b = TypeVariables(&#39;a&#39;, &#39;b&#39;)</span>
+<span class="sd">           f = Constant(&#39;f&#39;, FunctionType(a, b))</span>
+<span class="sd">           x = Variable(&#39;x&#39;, a)</span>
+
+<span class="sd">           print(f(x))</span>
+<span class="sd">           # (f : a → b) (x : a)</span>
+
+<span class="sd">           print(f(x).instantiate({a: BaseType(&#39;nat&#39;), b: BoolType()}))</span>
+<span class="sd">           # (f : nat → bool) (x : nat)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_instantiate</span><span class="p">(</span><span class="n">theta</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">theta</span> <span class="k">else</span> <span class="bp">self</span></div>
+
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_instantiate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+
+
+<div class="viewcode-block" id="TypeConstructor">
+<a class="viewcode-back" href="../../type_constructor.html#ulkb.TypeConstructor">[docs]</a>
+<span class="k">class</span> <span class="nc">TypeConstructor</span><span class="p">(</span><span class="n">Expression</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Type constructor.</span>
+
+<span class="sd">    Type constructors are the building blocks of type expressions.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1: Id.</span>
+<span class="sd">       arg2: Arity.</span>
+<span class="sd">       arg3: Associativity (``&#39;left&#39;`` or ``&#39;right&#39;``).</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       A new :class:`TypeConstructor`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_associativity_values</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>               <span class="c1"># (id, arity, associativity)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_arg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>              <span class="c1"># skip possible None</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_preprocess_arg</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">check_arg_class</span><span class="p">(</span>
+                <span class="n">arg</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">error</span><span class="o">.</span><span class="n">check_optional_arg_enum</span><span class="p">(</span>
+                <span class="n">arg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_associativity_values</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">associativity</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">arity</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">TypeApplication</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">associativity</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">foldl1</span><span class="p">(</span>
+                <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">TypeApplication</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+                <span class="n">args</span><span class="p">)</span><span class="o">.</span><span class="n">with_annotations</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">associativity</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">foldr1</span><span class="p">(</span>
+                <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">TypeApplication</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+                <span class="n">args</span><span class="p">)</span><span class="o">.</span><span class="n">with_annotations</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Type constructor id.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets type constructor id.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Type constructor id.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">arity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Type constructor arity.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_arity</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_arity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets type constructor arity.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Type constructor arity.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">associativity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Type constructor associativity.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_associativity</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_associativity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets type constructor associativity.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Type constructor associativity.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_constructors_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">([</span><span class="bp">self</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_instantiate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span></div>
+
+
+
+<div class="viewcode-block" id="Type">
+<a class="viewcode-back" href="../../type.html#ulkb.Type">[docs]</a>
+<span class="k">class</span> <span class="nc">Type</span><span class="p">(</span><span class="n">Expression</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base class for types.</span>
+
+<span class="sd">    A type is an expression representing a structured collection of values.</span>
+
+<span class="sd">    It can be either a :class:`TypeVariable` or a :class:`TypeApplication`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_preprocess_arg_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thy</span><span class="p">()</span><span class="o">.</span><span class="n">lookup_python_type_alias</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">LookupError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">error</span><span class="o">.</span><span class="n">arg_error</span><span class="p">(</span>
+                    <span class="n">arg</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Type</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Finds an instantiation that makes type match `other`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           other: :class:`Type`.</span>
+<span class="sd">           theta: Dictionary mapping variables to types.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           A type-variable instantiation (theta) if successful;</span>
+<span class="sd">           ``None`` otherwise.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Example:</span>
+
+<span class="sd">           a, b = TypeVariables(&#39;a&#39;, &#39;b&#39;)</span>
+<span class="sd">           t1 = FunctionType(a, b)</span>
+<span class="sd">           t2 = FunctionType(bool, bool, bool)</span>
+
+<span class="sd">           print(t1.match(t2))</span>
+<span class="sd">           # {(a : *): (bool : *), (b : *): (bool → bool : *)}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">other</span> <span class="o">=</span> <span class="n">Type</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_match</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">theta</span> <span class="ow">or</span> <span class="nb">dict</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">matches</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether type can instantiated to match `other`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           other: :class:`Type`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+
+
+<div class="viewcode-block" id="TypeVariable">
+<a class="viewcode-back" href="../../type.html#ulkb.TypeVariable">[docs]</a>
+<span class="k">class</span> <span class="nc">TypeVariable</span><span class="p">(</span><span class="n">Type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Type variable.</span>
+
+<span class="sd">    A type variable is an expression representing an arbitrary type.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1: Id.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       A new :class:`TypeVariable`.</span>
+
+<span class="sd">    .. code-block:: python</span>
+<span class="sd">       :caption: Example:</span>
+
+<span class="sd">       a = TypeVariable(&#39;a&#39;)</span>
+<span class="sd">       print(a)</span>
+<span class="sd">       # a : *</span>
+
+<span class="sd">    See also:</span>
+<span class="sd">       :func:`TypeVariables`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>               <span class="c1"># (id,)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_arg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="n">arg</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_preprocess_arg</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Type variable id.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets type variable id.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Type variable id.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_constructors_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">([</span><span class="bp">self</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_instantiate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="ow">in</span> <span class="n">theta</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">theta</span><span class="p">[</span><span class="bp">self</span><span class="p">],</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Type</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="ow">in</span> <span class="n">theta</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">theta</span> <span class="k">if</span> <span class="n">theta</span><span class="p">[</span><span class="bp">self</span><span class="p">]</span> <span class="o">==</span> <span class="n">other</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">theta</span><span class="p">[</span><span class="bp">self</span><span class="p">]</span> <span class="o">=</span> <span class="n">other</span>
+            <span class="k">return</span> <span class="n">theta</span></div>
+
+
+
+<div class="viewcode-block" id="TypeApplication">
+<a class="viewcode-back" href="../../type.html#ulkb.TypeApplication">[docs]</a>
+<span class="k">class</span> <span class="nc">TypeApplication</span><span class="p">(</span><span class="n">Type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Type application.</span>
+
+<span class="sd">    A type application is an expression representing the type obtained by</span>
+<span class="sd">    the application of a type constructor to other types.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1: :class:`TypeConstructor`.</span>
+<span class="sd">       args: :class:`Type`&#39;s.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       A new :class:`TypeApplication`.</span>
+
+<span class="sd">    .. code-block:: python</span>
+<span class="sd">       :caption: Example:</span>
+
+<span class="sd">       c0 = TypeConstructor(&#39;c0&#39;, 0)</span>
+<span class="sd">       print(c0())              # Equivalent to: TypeApplication(c0)</span>
+<span class="sd">       # c0 : *</span>
+
+<span class="sd">       c1 = TypeConstructor(&#39;c1&#39;, 1)</span>
+<span class="sd">       print(c1(c0()))          # Equivalent to: TypeApplication(c1, c0())</span>
+<span class="sd">       # c1 c0 : *</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_unfold</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="n">tcons</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">if</span> <span class="n">tcons</span><span class="o">.</span><span class="n">arity</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">tail</span>
+            <span class="k">if</span> <span class="n">tcons</span><span class="o">.</span><span class="n">associativity</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">tcons</span><span class="p">,</span> <span class="o">*</span><span class="n">util</span><span class="o">.</span><span class="n">unfoldl</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">tail</span> <span class="k">if</span> <span class="p">(</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">is_type_application</span><span class="p">()</span>
+                    <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">head</span> <span class="o">==</span> <span class="n">tcons</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="n">arg</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">tcons</span><span class="o">.</span><span class="n">associativity</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">tcons</span><span class="p">,</span> <span class="o">*</span><span class="n">util</span><span class="o">.</span><span class="n">unfoldr</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">tail</span> <span class="k">if</span> <span class="p">(</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">is_type_application</span><span class="p">()</span>
+                    <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">head</span> <span class="o">==</span> <span class="n">tcons</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="n">arg</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_unfold</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>               <span class="c1"># (tcons, type, ..., type)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_preprocess_args</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="n">tcons</span><span class="p">,</span> <span class="n">exp</span><span class="p">,</span> <span class="n">got</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">arity</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">exp</span> <span class="o">!=</span> <span class="n">got</span><span class="p">:</span>
+            <span class="n">qtd</span> <span class="o">=</span> <span class="s1">&#39;few&#39;</span> <span class="k">if</span> <span class="n">got</span> <span class="o">&lt;</span> <span class="n">exp</span> <span class="k">else</span> <span class="s1">&#39;many&#39;</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">arg_error</span><span class="p">(</span>
+                <span class="n">tcons</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;too </span><span class="si">{</span><span class="n">qtd</span><span class="si">}</span><span class="s1"> arguments: expected </span><span class="si">{</span><span class="n">exp</span><span class="si">}</span><span class="s1">, got </span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">args</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_arg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="n">arg</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_preprocess_arg</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_type_constructor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Type application head.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Example:</span>
+
+<span class="sd">           c0 = TypeConstructor(&#39;c0&#39;, 0)</span>
+<span class="sd">           c1 = TypeConstructor(&#39;c1&#39;, 1)</span>
+<span class="sd">           c2 = TypeConstructor(&#39;c2&#39;, 2)</span>
+<span class="sd">           print(c2(c1(c0()), c0()).head)</span>
+<span class="sd">           # c2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_head</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets type application head.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Type application head.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">tail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Type application tail.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Example:</span>
+
+<span class="sd">           c0 = TypeConstructor(&#39;c0&#39;, 0)</span>
+<span class="sd">           c1 = TypeConstructor(&#39;c1&#39;, 1)</span>
+<span class="sd">           c2 = TypeConstructor(&#39;c2&#39;, 2)</span>
+<span class="sd">           print(c2(c1(c0()), c0()).head)</span>
+<span class="sd">           # (c1 c0 : *, c0 : *)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tail</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_tail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets type application tail.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Type application tail.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+    <span class="k">def</span> <span class="nf">_get_unfolded_args_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_unfold_type_application</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_constructors_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">],</span>
+            <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">get_type_constructors</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">get_type_variables</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_instantiate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="n">args</span><span class="p">,</span> <span class="n">status</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">],</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">:</span>
+            <span class="n">y</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">_instantiate</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+            <span class="n">status</span> <span class="o">|=</span> <span class="n">s</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">),</span> <span class="n">status</span>
+
+    <span class="k">def</span> <span class="nf">_match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Type</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">other</span><span class="o">.</span><span class="n">is_type_application</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="n">h1</span><span class="p">,</span> <span class="o">*</span><span class="n">t1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_unpack_type_application</span><span class="p">()</span>
+        <span class="n">h2</span><span class="p">,</span> <span class="o">*</span><span class="n">t2</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">_unpack_type_application</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">h1</span> <span class="o">!=</span> <span class="n">h2</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">):</span>
+            <span class="n">theta</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">theta</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">theta</span></div>
+
+
+
+<div class="viewcode-block" id="Term">
+<a class="viewcode-back" href="../../term.html#ulkb.Term">[docs]</a>
+<span class="k">class</span> <span class="nc">Term</span><span class="p">(</span><span class="n">Expression</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base class for terms.</span>
+
+<span class="sd">    A term is an expression representing a value of a type.</span>
+
+<span class="sd">    It can be either a :class:`Variable`, :class:`Constant`,</span>
+<span class="sd">    :class:`Application`, or :class:`Abstraction`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;_cached_type&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_constants&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_variables&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_bound_variables&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_free_variables&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_nameless_variables&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_preprocess_arg_term</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">Term</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">spec</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thy</span><span class="p">()</span><span class="o">.</span><span class="n">lookup_python_type_alias_spec</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">arg</span><span class="p">))</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="s1">&#39;cast&#39;</span><span class="p">):</span>
+                    <span class="n">arg</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">LookupError</span><span class="p">:</span>
+                <span class="k">pass</span>
+        <span class="k">return</span> <span class="n">Term</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">args</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_atomic_term</span><span class="p">()</span>
+                <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">is_function_type</span><span class="p">()):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_annotations</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Application</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__rshift__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Abstraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__rrshift__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Abstraction</span><span class="p">(</span><span class="o">*</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__lshift__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">other</span> <span class="o">&gt;&gt;</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_build_type_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the term type.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_type</span><span class="p">()</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_get_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">has_constants</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether some constant occurs in term.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">constants</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_constants_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the set of constants occurring in term.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_constants_iterator</span><span class="p">())</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_get_constants_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">has_occurrence_of</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether variable `x` occurs (bound or free) in term.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           x: :class:`Variable`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span>
+
+    <span class="k">def</span> <span class="nf">has_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether some variable occurs in term.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">variables</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_variables_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the set of variables occurring in term.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_variables_iterator</span><span class="p">())</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_get_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">has_bound_occurrence_of</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether variable `x` occurs bound in term.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           x: :class:`Variable`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">bound_variables</span>
+
+    <span class="k">def</span> <span class="nf">has_bound_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether some bound variable occurs in term.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bound_variables</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_bound_variables_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the set of bound variables occurring in term.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_bound_variables_iterator</span><span class="p">())</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_get_bound_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">has_free_occurrence_of</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether variable `x` occurs free in term.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           x: :class:`Variable`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">free_variables</span>
+
+    <span class="k">def</span> <span class="nf">has_free_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether some free variable occurs in term.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">free_variables</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_free_variables_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the set of free variables occurring in term.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_free_variables_iterator</span><span class="p">())</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_get_free_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">has_nameless_occurrence_of</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether nameless variable `x` occurs in term.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           x: :class:`BoundVariable`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nameless_variables</span>
+
+    <span class="k">def</span> <span class="nf">has_nameless_variables</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether some nameless variable occurs in term.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nameless_variables</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_nameless_variables_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the set of nameless variables occurring in term.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_nameless_variables_iterator</span><span class="p">())</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_get_nameless_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Replaces free variable `x` by bound variable in term.</span>
+
+<span class="sd">        (Internal: Not intended for direct use.)</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           x: :class:`Variable`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           A new :class:`Term`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Example:</span>
+
+<span class="sd">           x, y = Variables(&#39;x&#39;, &#39;y&#39;, BoolType())</span>
+<span class="sd">           t = Abstraction(x, y)(y)</span>
+<span class="sd">           print(t.open(y))</span>
+<span class="sd">           # (𝜆 (x : bool) ⇒ (1 : bool)) (0 : bool)</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :class:`BoundVariable`, :func:`Term.close`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Replaces bound variable by `term` in term.</span>
+
+<span class="sd">        (Internal: Not intended for direct use.)</span>
+
+<span class="sd">        Parameter:</span>
+<span class="sd">           term: :class:`Term`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           A new :class:`Term`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Example:</span>
+
+<span class="sd">           x, y, z = Variables(&#39;x&#39;, &#39;y&#39;, &#39;z&#39;, BoolType())</span>
+<span class="sd">           t = Abstraction(x, y)(y)</span>
+<span class="sd">           t1 = t.open(y)</span>
+<span class="sd">           print(t1)</span>
+<span class="sd">           # (𝜆 (x : bool) ⇒ (1 : bool)) (0 : bool)</span>
+
+<span class="sd">           t2 = t1.close(z)</span>
+<span class="sd">           print(t2)</span>
+<span class="sd">           # (𝜆 (x : bool) ⇒ (z : bool)) (z : bool)</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :class:`BoundVariable`, :func:`Term.open`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_close</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">substitute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Applies free-variable substitution `theta` to term.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           theta: Dictionary mapping variables to terms.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           The resulting :class:`Term`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           ValueError: `theta` is invalid.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Example:</span>
+
+<span class="sd">           a = TypeVariable(&#39;a&#39;)</span>
+<span class="sd">           x, y, z = Variables(&#39;x&#39;, &#39;y&#39;, &#39;z&#39;, a)</span>
+<span class="sd">           f = Constant(&#39;f&#39;, FunctionType(a, a, a))</span>
+
+<span class="sd">           t = Abstraction(x, f(x, y))</span>
+<span class="sd">           print(t.substitute({y: z}))</span>
+<span class="sd">           # 𝜆 x ⇒ f x z</span>
+
+<span class="sd">           t = Abstraction(x, f(x, y))</span>
+<span class="sd">           print(t.substitute({y: x}))</span>
+<span class="sd">           # 𝜆 x0 ⇒ f x0 x</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">theta</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">Variable</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">Term</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">or</span> <span class="n">v</span><span class="o">.</span><span class="n">type</span> <span class="o">!=</span> <span class="n">t</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">error</span><span class="o">.</span><span class="n">arg_error</span><span class="p">(</span>
+                    <span class="n">theta</span><span class="p">,</span> <span class="s1">&#39;invalid theta&#39;</span><span class="p">,</span> <span class="s1">&#39;substitute&#39;</span><span class="p">,</span> <span class="s1">&#39;theta&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_substitute</span><span class="p">(</span><span class="n">theta</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">theta</span> <span class="k">else</span> <span class="bp">self</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_substitute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+
+
+<span class="k">class</span> <span class="nc">AtomicTerm</span><span class="p">(</span><span class="n">Term</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base class for atomic terms.&quot;&quot;&quot;</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>               <span class="c1"># (id, type)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_arg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__matmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__matmul__</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_type</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Atomic term id.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get atomic term id.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Atomic term id.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_constructors_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">get_type_constructors</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">get_type_variables</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_instantiate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="nb">type</span><span class="p">,</span> <span class="n">status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">_instantiate</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">status</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_type</span><span class="p">(</span><span class="nb">type</span><span class="p">),</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_get_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>        <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">with_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Copies atomic term overwriting its type.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           type: :class:`Type`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           The resulting :class:`AtomicTerm`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Equivalent to:</span>
+
+<span class="sd">           term.copy(term.id, type)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Variable">
+<a class="viewcode-back" href="../../term.html#ulkb.Variable">[docs]</a>
+<span class="k">class</span> <span class="nc">Variable</span><span class="p">(</span><span class="n">AtomicTerm</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Variable.</span>
+
+<span class="sd">    A variable is an atomic expression representing an arbitrary</span>
+<span class="sd">    value of a type.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1: Id.</span>
+<span class="sd">       type: :class:`Type`.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       A new :class:`Variable`.</span>
+
+<span class="sd">    See also:</span>
+<span class="sd">       :func:`Variables`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>               <span class="c1"># (id, type)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_constants_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">([</span><span class="bp">self</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_get_bound_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_free_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">([</span><span class="bp">self</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_get_nameless_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>      <span class="c1"># Term</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">BoundVariable</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_substitute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="ow">in</span> <span class="n">theta</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">theta</span><span class="p">[</span><span class="bp">self</span><span class="p">],</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">occurs_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">it</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether variable occurs in some term in `it`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           it: Iterable.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">any_map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">has_occurrence_of</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="nb">iter</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">occurs_bound_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">it</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether variable occurs bound in some term in `it`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           it: Iterable.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">any_map</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">has_bound_occurrence_of</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="nb">iter</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">occurs_free_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">it</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Tests whether variable occurs free in some term in `it`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           it: Iterable.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           ``True`` if successful; ``False`` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">any_map</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">has_free_occurrence_of</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="nb">iter</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">get_variant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">avoid_test</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets a variant that passes `avoid_test`.</span>
+
+<span class="sd">        `avoid_test` is a function that takes a variable and returns</span>
+<span class="sd">        ``True`` if it is unacceptable, or ``False`` if it is acceptable.</span>
+
+<span class="sd">        If variable passes `avoid_test`, returns variable itself.</span>
+<span class="sd">        Otherwise, generates and returns a similarly named variant that</span>
+<span class="sd">        passes `avoid_test`.</span>
+
+<span class="sd">        Parameter:</span>
+<span class="sd">           avoid_test: Function.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Variable itself or a new similarly named variant.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Example:</span>
+
+<span class="sd">           x = Variable(&#39;x&#39;, BoolType())</span>
+
+<span class="sd">           print(x.get_variant(lambda v: v == x))</span>
+<span class="sd">           # x : bool</span>
+
+<span class="sd">           print(x.get_variant(lambda v: v.id in {&#39;x&#39;, &#39;x0&#39;, &#39;x1&#39;}))</span>
+<span class="sd">           # x2 : bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">while</span> <span class="n">avoid_test</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="n">util</span><span class="o">.</span><span class="n">get_variant</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+    <span class="k">def</span> <span class="nf">get_variant_not_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">avoid</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets a variant that does not occur in `avoid`.</span>
+
+<span class="sd">        If variable does not occur in `avoid`, returns variable itself.</span>
+<span class="sd">        Otherwise, generates and returns a similarly named variant that does</span>
+<span class="sd">        not occur in `avoid`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           avoid: Iterable.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Variable itself or a similarly named variant.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`Variable.get_variable`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variant</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">occurs_in</span><span class="p">(</span><span class="n">avoid</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">get_variant_not_bound_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">avoid</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets a variant that does not occur bound in `avoid`.</span>
+
+<span class="sd">        If variable does not occur bound in `avoid`, returns variable</span>
+<span class="sd">        itself.  Otherwise, generates and returns a similarly named variant</span>
+<span class="sd">        that does not occur bound in `avoid`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           avoid: Iterable.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Variable itself or a similarly named variant.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`Variable.get_variable`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variant</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">occurs_bound_in</span><span class="p">(</span><span class="n">avoid</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">get_variant_not_free_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">avoid</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets a variant that does not occur free in `avoid`.</span>
+
+<span class="sd">        If variable does not occur free in `avoid`, returns variable itself.</span>
+<span class="sd">        Otherwise, generates and returns a similarly named variant that does</span>
+<span class="sd">        not occur free in `avoid`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           avoid: Iterable.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Variable itself or a similarly named variant.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`Variable.get_variable`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_variant</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">occurs_free_in</span><span class="p">(</span><span class="n">avoid</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="BoundVariable">
+<a class="viewcode-back" href="../../term.html#ulkb.BoundVariable">[docs]</a>
+<span class="k">class</span> <span class="nc">BoundVariable</span><span class="p">(</span><span class="n">Variable</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bound variable.</span>
+
+<span class="sd">    (Internal: Not intended for direct use.)</span>
+
+<span class="sd">    Internally, terms use what is called a `locally nameless representation`.</span>
+<span class="sd">    This is a combination of using De Bruijn indices for variables local to</span>
+<span class="sd">    the current term (:class:`BoundVariable`) and names for variables global</span>
+<span class="sd">    to the current term (:class:`Variable`).  See C. McBride and J. McKinna,</span>
+<span class="sd">    &quot;Functional Pearl: I am not a number--I am a free variable&quot;, Haskell&#39;04,</span>
+<span class="sd">    2004. ACM.</span>
+
+<span class="sd">    See also:</span>
+<span class="sd">       :func:`Term.open`, :func:`Term.close`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>               <span class="c1"># (id, type)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_arg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="n">arg</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_preprocess_arg</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">error</span><span class="o">.</span><span class="n">check_arg_class</span><span class="p">(</span>
+                <span class="n">arg</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">arg</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_get_constants_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_bound_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_free_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_nameless_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">([</span><span class="bp">self</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>      <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">i</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">term</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">term</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_substitute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">occurs_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">it</span><span class="p">):</span>    <span class="c1"># Variable</span>
+        <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">occurs_bound_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">it</span><span class="p">):</span>  <span class="c1"># Variable</span>
+        <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">occurs_free_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">it</span><span class="p">):</span>  <span class="c1"># Variable</span>
+        <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_variant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">avoid_test</span><span class="p">):</span>  <span class="c1"># Variable</span>
+        <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_variant_not_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">avoid</span><span class="p">):</span>  <span class="c1"># Variable</span>
+        <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_variant_not_bound_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">avoid</span><span class="p">):</span>  <span class="c1"># Variable</span>
+        <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_variant_not_free_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">avoid</span><span class="p">):</span>  <span class="c1"># Variable</span>
+        <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="Constant">
+<a class="viewcode-back" href="../../term.html#ulkb.Constant">[docs]</a>
+<span class="k">class</span> <span class="nc">Constant</span><span class="p">(</span><span class="n">AtomicTerm</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constant.</span>
+
+<span class="sd">    A constant is an atomic expression representing a particular</span>
+<span class="sd">    value of a type.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1: Id.</span>
+<span class="sd">       type: :class:`Type`.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       A new :class:`Constant`.</span>
+
+<span class="sd">    See also:</span>
+<span class="sd">       :func:`Constants`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>               <span class="c1"># (id, type)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_constants_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">([</span><span class="bp">self</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_get_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_bound_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_free_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_get_nameless_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(())</span>
+
+    <span class="k">def</span> <span class="nf">_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>      <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_substitute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span></div>
+
+
+
+<span class="k">class</span> <span class="nc">CompoundTerm</span><span class="p">(</span><span class="n">Term</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base class for compound terms.&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;First argument of compound term.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_left</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the first argument of compound term.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           First argument of compound term.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Second argument of compound term.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the second argument of compound term.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Second argument of compound term.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_type_variables</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_type_variables</span><span class="p">())</span>
+
+
+<div class="viewcode-block" id="Application">
+<a class="viewcode-back" href="../../term.html#ulkb.Application">[docs]</a>
+<span class="k">class</span> <span class="nc">Application</span><span class="p">(</span><span class="n">CompoundTerm</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Application.</span>
+
+<span class="sd">    An application is a compound expression representing the application</span>
+<span class="sd">    of `arg1` to `arg2`.</span>
+
+<span class="sd">    Application is left-associative: If more than two arguments are given,</span>
+<span class="sd">    the result is left-folded.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1: :class:`Term`.</span>
+<span class="sd">       arg2: :class:`Term`.</span>
+<span class="sd">       args: Remaining :class:`Term`&#39;s.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       A new :class:`Application`.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">       ValueError: `arg1` cannot be applied to `arg2`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_unfold</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">util</span><span class="o">.</span><span class="n">unfoldl</span><span class="p">(</span>
+            <span class="n">Application</span><span class="o">.</span><span class="n">unpack_application_unsafe</span><span class="p">,</span> <span class="n">arg</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>               <span class="c1"># (term1, term2, ...)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">util</span><span class="o">.</span><span class="n">foldl_infix</span><span class="p">(</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_arg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="n">arg</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_preprocess_arg</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">arg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_term</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">error</span><span class="o">.</span><span class="n">check_arg</span><span class="p">(</span>
+                <span class="n">arg</span><span class="p">,</span> <span class="n">arg</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">test_function_type</span><span class="p">(),</span> <span class="s1">&#39;not a function&#39;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">arg</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_preprocess_args</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="n">dom</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">unpack_function_type</span><span class="p">()</span>
+        <span class="n">got</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">type</span>
+        <span class="n">theta</span> <span class="o">=</span> <span class="n">dom</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">got</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">theta</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">arg_error</span><span class="p">(</span>
+                <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;expected &#39;</span><span class="si">{</span><span class="n">dom</span><span class="si">}</span><span class="s2">&#39;, got &#39;</span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">theta</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">instantiate</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">args</span>
+
+    <span class="k">def</span> <span class="nf">_get_unfolded_args_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_unfold_application</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_constructors_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_type_constructors</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_type_constructors</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_instantiate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="n">left</span><span class="p">,</span> <span class="n">lstatus</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_instantiate</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">,</span> <span class="n">rstatus</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_instantiate</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">lstatus</span> <span class="ow">or</span> <span class="n">rstatus</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">),</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_get_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>        <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_get_constants_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_constants</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_constants</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_variables</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_variables</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_bound_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_bound_variables</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_bound_variables</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_free_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_free_variables</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_free_variables</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_nameless_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_nameless_variables</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_nameless_variables</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>      <span class="c1"># Term</span>
+        <span class="n">freel</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">has_free_occurrence_of</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">freer</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">has_free_occurrence_of</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">freel</span> <span class="ow">and</span> <span class="n">freer</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span>
+                <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">freel</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">freer</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">_nty</span><span class="o">=</span><span class="n">Term</span><span class="o">.</span><span class="n">get_type</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="n">lessl</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">type</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="n">_nty</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">nameless_variables</span><span class="p">)</span>
+        <span class="n">lessr</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">type</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="n">_nty</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">nameless_variables</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">lessl</span> <span class="ow">and</span> <span class="n">lessr</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span>
+                <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_close</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_close</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">lessl</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_close</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">lessr</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_close</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_substitute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="n">left</span><span class="p">,</span> <span class="n">lstatus</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_substitute</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">,</span> <span class="n">rstatus</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_substitute</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">lstatus</span> <span class="ow">or</span> <span class="n">rstatus</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">),</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span></div>
+
+
+
+<div class="viewcode-block" id="Abstraction">
+<a class="viewcode-back" href="../../term.html#ulkb.Abstraction">[docs]</a>
+<span class="k">class</span> <span class="nc">Abstraction</span><span class="p">(</span><span class="n">CompoundTerm</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstraction.</span>
+
+<span class="sd">    An abstraction is a compound expression representing the function</span>
+<span class="sd">    obtained by abstracting variable `arg1` over `arg2`.</span>
+
+<span class="sd">    Abstraction is right-associative: If more than two arguments are given,</span>
+<span class="sd">    the result is right-folded.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1: :class:`Variable`.</span>
+<span class="sd">       arg2: :class:`Variable` or :class:`Term`.</span>
+<span class="sd">       args: Remaining :class:`Variable`&#39;s followed by a :class:`Term`.</span>
+<span class="sd">       _open: Whether to open `arg1` in `arg2`.</span>
+<span class="sd">          (Internal: Not intended for direct use.)</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       A new :class:`Abstraction`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_dup</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">_open</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_unfold</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">util</span><span class="o">.</span><span class="n">unfoldr</span><span class="p">(</span>
+            <span class="n">Abstraction</span><span class="o">.</span><span class="n">unpack_abstraction_unsafe</span><span class="p">,</span> <span class="n">arg</span><span class="p">))</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_unpack</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">arg</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">arg</span><span class="o">.</span><span class="n">right</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;_cached_undebruijned_args&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>               <span class="c1"># (var1, var2, ..., term)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">_open</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_open_flag</span> <span class="o">=</span> <span class="n">_open</span>  <span class="c1"># hack to pass _open to _preprocess_args;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="p">:</span>             <span class="c1"># we can&#39;t use util.foldr_infix below</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arg2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">arg2</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">_open</span><span class="o">=</span><span class="n">_open</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>    <span class="c1"># anonymize arg[0]</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+                <span class="ow">and</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">other</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span>
+                <span class="ow">and</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">other</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>         <span class="c1"># anonymize arg[0]</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">_dump</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>            <span class="c1"># anonymize arg[0]</span>
+        <span class="n">cls_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;(</span><span class="si">{</span><span class="n">cls_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span><span class="si">}</span><span class="s1">)&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_arg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">arg</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_preprocess_arg</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_arg_term</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_preprocess_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_preprocess_args</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="n">open_flag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open_flag</span>
+        <span class="nb">delattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_open_flag&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">open_flag</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">args</span>
+
+    <span class="k">def</span> <span class="nf">_get_unfolded_args_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_unfold_abstraction</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_type_constructors_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span>
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">head</span><span class="p">],</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_type_constructors</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_type_constructors</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_instantiate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>  <span class="c1"># Expression</span>
+        <span class="n">left</span><span class="p">,</span> <span class="n">lstatus</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_instantiate</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">,</span> <span class="n">rstatus</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_instantiate</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">lstatus</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">rstatus</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">left</span><span class="o">.</span><span class="n">occurs_free_in</span><span class="p">([</span><span class="n">right</span><span class="p">]):</span>
+            <span class="n">left</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">get_variant_not_free_in</span><span class="p">([</span><span class="n">right</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">),</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">_get_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>        <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">FunctionType</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_constants_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_constants</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">([</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_variables</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_bound_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">([</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_bound_variables</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_free_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_free_variables</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_get_nameless_variables_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_nameless_variables</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>      <span class="c1"># Term</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">has_free_occurrence_of</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">_nty</span><span class="o">=</span><span class="n">Term</span><span class="o">.</span><span class="n">get_type</span><span class="p">):</span>  <span class="c1"># Term</span>
+        <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="n">_nty</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">nameless_variables</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_close</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_substitute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+        <span class="n">left</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">right</span><span class="p">,</span> <span class="n">rstatus</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_substitute</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">rstatus</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">left</span><span class="o">.</span><span class="n">occurs_in</span><span class="p">([</span><span class="n">right</span><span class="p">]):</span>  <span class="c1"># rename</span>
+            <span class="n">left</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">get_variant_not_in</span><span class="p">([</span><span class="n">right</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">),</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">get_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>        <span class="c1"># CompoundTerm</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">undebruijned_args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_build_undebruijned_args_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the arguments of abstraction un-De Bruijn&#39;ed.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Renames bound variable to `x`.</span>
+
+<span class="sd">        If `x` occurs free in the abstraction, instead of `x` uses its first</span>
+<span class="sd">        variant not free in the abstraction.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           x: :class:`Variable`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           A new :class:`Abstraction`.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`Variable.get_variant_not_free_in`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">occurs_in</span><span class="p">([</span><span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]]):</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">get_variant_not_in</span><span class="p">([</span><span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_args</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, IBM Corp.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

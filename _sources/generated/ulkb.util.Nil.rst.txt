@@ -1,0 +1,22 @@
+﻿ulkb.util.Nil
+=============
+
+.. currentmodule:: ulkb.util
+
+.. autoclass:: Nil
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Nil.__init__
+   
+   
+
+   
+   
+   

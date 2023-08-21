@@ -1,0 +1,6 @@
+﻿ulkb.Object.check\_theory
+=========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.check_theory

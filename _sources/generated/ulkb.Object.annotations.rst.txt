@@ -1,0 +1,6 @@
+﻿ulkb.Object.annotations
+=======================
+
+.. currentmodule:: ulkb
+
+.. autoproperty:: Object.annotations

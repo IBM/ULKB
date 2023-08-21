@@ -1,0 +1,6 @@
+﻿ulkb.Theory.push
+================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.push

@@ -1,0 +1,6 @@
+﻿ulkb.Expression.get\_type\_variables
+====================================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Expression.get_type_variables

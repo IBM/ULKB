@@ -1,0 +1,6 @@
+﻿ulkb.\_thy
+==========
+
+.. currentmodule:: ulkb
+
+.. autofunction:: _thy

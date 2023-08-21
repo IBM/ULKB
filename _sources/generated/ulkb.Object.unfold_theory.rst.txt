@@ -1,0 +1,6 @@
+﻿ulkb.Object.unfold\_theory
+==========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.unfold_theory

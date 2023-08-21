@@ -1,0 +1,6 @@
+﻿ulkb.util.identity
+==================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: identity

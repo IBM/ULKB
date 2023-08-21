@@ -1,0 +1,6 @@
+﻿ulkb.Object.to\_tptp
+====================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.to_tptp

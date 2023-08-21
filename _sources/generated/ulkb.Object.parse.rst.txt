@@ -1,0 +1,6 @@
+﻿ulkb.Object.parse
+=================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.parse

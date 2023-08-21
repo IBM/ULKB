@@ -1,0 +1,6 @@
+﻿ulkb.Object.from\_z3
+====================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.from_z3

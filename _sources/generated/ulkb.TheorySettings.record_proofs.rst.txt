@@ -1,0 +1,6 @@
+﻿ulkb.TheorySettings.record\_proofs
+==================================
+
+.. currentmodule:: ulkb
+
+.. autoattribute:: TheorySettings.record_proofs

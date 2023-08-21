@@ -1,0 +1,6 @@
+﻿ulkb.Object.args
+================
+
+.. currentmodule:: ulkb
+
+.. autoproperty:: Object.args

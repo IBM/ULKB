@@ -1,0 +1,6 @@
+﻿ulkb.Theory.new\_theorem
+========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.new_theorem

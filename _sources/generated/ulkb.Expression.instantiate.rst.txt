@@ -1,0 +1,6 @@
+﻿ulkb.Expression.instantiate
+===========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Expression.instantiate

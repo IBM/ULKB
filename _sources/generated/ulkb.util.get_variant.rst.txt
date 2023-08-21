@@ -1,0 +1,6 @@
+﻿ulkb.util.get\_variant
+======================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: get_variant

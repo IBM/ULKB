@@ -1,0 +1,6 @@
+﻿ulkb.Theory.lookup\_type\_constructor
+=====================================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.lookup_type_constructor

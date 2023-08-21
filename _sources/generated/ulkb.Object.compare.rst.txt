@@ -1,0 +1,6 @@
+﻿ulkb.Object.compare
+===================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.compare

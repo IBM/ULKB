@@ -1,0 +1,6 @@
+﻿ulkb.Theory.lookup\_python\_type\_alias
+=======================================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.lookup_python_type_alias

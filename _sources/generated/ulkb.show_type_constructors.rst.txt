@@ -1,0 +1,6 @@
+﻿ulkb.show\_type\_constructors
+=============================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: show_type_constructors

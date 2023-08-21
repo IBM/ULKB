@@ -1,0 +1,6 @@
+﻿ulkb.Theory.lookup\_definition
+==============================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.lookup_definition

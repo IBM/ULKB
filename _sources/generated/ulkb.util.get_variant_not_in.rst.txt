@@ -1,0 +1,6 @@
+﻿ulkb.util.get\_variant\_not\_in
+===============================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: get_variant_not_in

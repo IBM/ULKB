@@ -1,0 +1,6 @@
+﻿ulkb.Object.check\_expression
+=============================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.check_expression

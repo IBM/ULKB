@@ -1,0 +1,1041 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ulkb.prelude.formula &#8212; ulkb  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/ulkb/prelude/formula';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">ulkb  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../object.html">
+                        Object
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../expression.html">
+                        Expression
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../type_constructor.html">
+                        Type constructor
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../type.html">
+                        Type
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../term.html">
+                        Term
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../prelude.html">
+                        Prelude
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../extension.html">
+                        Extension
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../theory.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../commands.html">
+                        Commands
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../conversion.html">
+                        Conversion, parsing, serialization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../more.html">
+                        Appendix: More object methods
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../util.html">
+                        Appendix: Utilities
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../object.html">
+                        Object
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../expression.html">
+                        Expression
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../type_constructor.html">
+                        Type constructor
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../type.html">
+                        Type
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../term.html">
+                        Term
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../prelude.html">
+                        Prelude
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../extension.html">
+                        Extension
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../theory.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../commands.html">
+                        Commands
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../conversion.html">
+                        Conversion, parsing, serialization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../more.html">
+                        Appendix: More object methods
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../util.html">
+                        Appendix: Utilities
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">ulkb.prelude.formula</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for ulkb.prelude.formula</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2023 IBM Corp.</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">util</span>
+<span class="kn">from</span> <span class="nn">..commands</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..defined</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..expression</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..theory</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.bootstrap</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Formula&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Equal&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Iff&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Truth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;And&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Implies&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Forall&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Falsity&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Not&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Or&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Exists&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Exists1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;equal&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;true&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;false&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;not_&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;and_&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;or_&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;iff&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;implies&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;exists&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;exists1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;forall&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;eq&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ne&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="Formula">
+<a class="viewcode-back" href="../../../prelude.html#ulkb.Formula">[docs]</a>
+<span class="k">class</span> <span class="nc">Formula</span><span class="p">(</span><span class="n">Term</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base class for formulas.</span>
+
+<span class="sd">    A formula is a term of type :func:`BoolType()` representing a logical</span>
+<span class="sd">    proposition.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Term</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="ow">and</span> <span class="n">arg</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">is_bool_type</span><span class="p">()</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">nff_prop</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">arg</span><span class="p">))</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_nnf_prop</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_not</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">p</span><span class="p">,)</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_not</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">is_not</span><span class="p">():</span>      <span class="c1"># ¬¬p ▷ f(p)</span>
+                <span class="p">(</span><span class="n">p</span><span class="p">,)</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">_unpack_not</span><span class="p">()</span>
+                <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_and</span><span class="p">():</span>    <span class="c1"># ¬(p ∧ q) ▷ f(¬p) ∨ f(¬q)</span>
+                <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">_unpack_and</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">Or</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">p</span><span class="p">)),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">q</span><span class="p">)))</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_or</span><span class="p">():</span>     <span class="c1"># ¬(p ∨ q) ▷ f(¬p) ∧ f(¬q)</span>
+                <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">_unpack_or</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">And</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">p</span><span class="p">)),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">q</span><span class="p">)))</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_implies</span><span class="p">():</span>  <span class="c1"># ¬(p → q) ▷ f(p) ∧ f(¬q)</span>
+                <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">_unpack_implies</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">And</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">q</span><span class="p">)))</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_iff</span><span class="p">():</span>    <span class="c1"># ¬(p ↔ q) ▷ (f(p) ∧ f(¬q)) ∨ (f(¬p) ∧ f(q))</span>
+                <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">_unpack_iff</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">Or</span><span class="p">(</span>
+                    <span class="n">And</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">q</span><span class="p">))),</span>
+                    <span class="n">And</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">p</span><span class="p">)),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">q</span><span class="p">)))</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_and</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_and</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">And</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_or</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_or</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">Or</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_implies</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_implies</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">Or</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">p</span><span class="p">)),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_iff</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_iff</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">Or</span><span class="p">(</span>
+                <span class="n">And</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">q</span><span class="p">)),</span>
+                <span class="n">And</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">p</span><span class="p">)),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nnf_prop</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">q</span><span class="p">))))</span>
+        <span class="k">return</span> <span class="n">arg</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_simplify_prop</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_not</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">p</span><span class="p">,)</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_not</span><span class="p">()</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="n">Not</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_and</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_and</span><span class="p">()</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="n">And</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_or</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_or</span><span class="p">()</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="n">Or</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_implies</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_implies</span><span class="p">()</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="n">Implies</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_iff</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_iff</span><span class="p">()</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="n">Iff</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">arg</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_simplify_prop1</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_simplify_prop1</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_not</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">p</span><span class="p">,)</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_not</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">is_truth</span><span class="p">():</span>    <span class="c1"># ¬⊤ ▷ ⊥</span>
+                <span class="k">return</span> <span class="n">Falsity</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_falsity</span><span class="p">():</span>  <span class="c1"># ¬⊥ ▷ ⊤</span>
+                <span class="k">return</span> <span class="n">Truth</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_not</span><span class="p">():</span>    <span class="c1"># ¬¬q ▷ q</span>
+                <span class="p">(</span><span class="n">q</span><span class="p">,)</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">_unpack_not</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">q</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_and</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_and</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">is_truth</span><span class="p">():</span>    <span class="c1"># ⊤ ∧ q ▷ q</span>
+                <span class="k">return</span> <span class="n">q</span>
+            <span class="k">elif</span> <span class="n">q</span><span class="o">.</span><span class="n">is_truth</span><span class="p">():</span>  <span class="c1"># p ∧ ⊤ ▷ p</span>
+                <span class="k">return</span> <span class="n">p</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_falsity</span><span class="p">()</span> <span class="ow">or</span> <span class="n">q</span><span class="o">.</span><span class="n">is_falsity</span><span class="p">():</span>  <span class="c1"># ⊥ ∧ q, p ∧ ⊥ ▷ ⊥</span>
+                <span class="k">return</span> <span class="n">Falsity</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_or</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_or</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">is_falsity</span><span class="p">():</span>  <span class="c1"># ⊥ ∨ q ▷ q</span>
+                <span class="k">return</span> <span class="n">q</span>
+            <span class="k">elif</span> <span class="n">q</span><span class="o">.</span><span class="n">is_falsity</span><span class="p">():</span>  <span class="c1"># p ∨ ⊥ ▷ p</span>
+                <span class="k">return</span> <span class="n">p</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_truth</span><span class="p">()</span> <span class="ow">or</span> <span class="n">q</span><span class="o">.</span><span class="n">is_truth</span><span class="p">():</span>  <span class="c1"># ⊤ ∨ q, p ∨ ⊤ ▷ ⊤</span>
+                <span class="k">return</span> <span class="n">Truth</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_implies</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_or</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">is_truth</span><span class="p">():</span>    <span class="c1"># ⊤ → q ▷ q</span>
+                <span class="k">return</span> <span class="n">q</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_falsity</span><span class="p">()</span> <span class="ow">or</span> <span class="n">q</span><span class="o">.</span><span class="n">is_truth</span><span class="p">():</span>  <span class="c1"># ⊥ → q, p → ⊤ ▷ ⊤</span>
+                <span class="k">return</span> <span class="n">Truth</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_iff</span><span class="p">():</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_iff</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">is_truth</span><span class="p">():</span>    <span class="c1"># ⊤ ↔ q ▷ q</span>
+                <span class="k">return</span> <span class="n">q</span>
+            <span class="k">elif</span> <span class="n">q</span><span class="o">.</span><span class="n">is_truth</span><span class="p">():</span>  <span class="c1"># p ↔ ⊤ ▷ p</span>
+                <span class="k">return</span> <span class="n">p</span>
+            <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">is_falsity</span><span class="p">():</span>  <span class="c1"># ⊥ ↔ q ▷ ¬q</span>
+                <span class="k">return</span> <span class="n">Not</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">q</span><span class="o">.</span><span class="n">is_falsity</span><span class="p">():</span>  <span class="c1"># p ↔ ⊥ ▷ ¬p</span>
+                <span class="k">return</span> <span class="n">Not</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">arg</span></div>
+
+
+
+<span class="k">class</span> <span class="nc">Equal</span><span class="p">(</span><span class="n">Application</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Equality (:math:`=`).</span>
+
+<span class="sd">    Constructs an equation by applying the equality constructor</span>
+<span class="sd">    :math:`(\mathtt{equal} : 𝛼 → 𝛼 → \mathtt{bool})` to `arg1` and `arg2`.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1 (:class:`Term`): :math:`t_1`.</span>
+<span class="sd">       arg2 (:class:`Term`): :math:`t_2`.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Application`:</span>
+<span class="sd">       :math:`t_1 = t_2`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">constructor</span> <span class="o">=</span> <span class="n">new_constant</span><span class="p">(</span>
+        <span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="n">FunctionType</span><span class="p">(</span><span class="n">TypeVariable</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="n">TypeVariable</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="n">bool_</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span>                <span class="c1"># (term, term)</span>
+            <span class="bp">cls</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">constructor</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">Application</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+                <span class="ow">and</span> <span class="n">Application</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+                <span class="ow">and</span> <span class="n">arg</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">is_constant</span><span class="p">()</span>
+                <span class="ow">and</span> <span class="n">arg</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="bp">cls</span><span class="o">.</span><span class="n">constructor</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_unfold</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_unpack</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_unpack</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">l</span><span class="p">),</span> <span class="n">r</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_application</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">eq</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># macro</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">And</span><span class="p">(</span>
+                <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">),</span>
+                     <span class="n">util</span><span class="o">.</span><span class="n">sliding_pairs_args</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">ne</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># macro</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Not</span><span class="p">(</span><span class="bp">cls</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">And</span><span class="p">(</span>
+                <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">Not</span><span class="p">(</span><span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">)),</span>
+                     <span class="n">util</span><span class="o">.</span><span class="n">sliding_pairs_args</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Iff</span><span class="p">(</span><span class="n">Equal</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Equivalence (bi-implication, :math:`↔`).</span>
+
+<span class="sd">    Constructs a logical equivalence by applying :class:`Equal` to the</span>
+<span class="sd">    formulas `arg1` and `arg2`.</span>
+
+<span class="sd">    Equivalence is right-associative: If more than two arguments are given,</span>
+<span class="sd">    the result is right-folded.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1 (:class:`Formula`): :math:`p_1`.</span>
+<span class="sd">       arg2 (:class:`Formula`): :math:`p_2`.</span>
+<span class="sd">       args: Remaining :class:`Formula`&#39;s.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Application`:</span>
+<span class="sd">       :math:`p_1 ↔ (p_2 ↔ (… ↔ (p_{n-1} ↔ p_n)))`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_constructor</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">form1</span> <span class="o">=</span> <span class="n">Formula</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">form2</span> <span class="o">=</span> <span class="n">Formula</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">arg2</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Equal</span><span class="p">(</span><span class="n">form1</span><span class="p">,</span> <span class="n">form2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span>                <span class="c1"># (form, form)</span>
+            <span class="bp">cls</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">foldr_infix</span><span class="p">(</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_constructor</span><span class="p">,</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">Equal</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">_unpack_equal</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">l</span><span class="o">.</span><span class="n">is_formula</span><span class="p">()</span> <span class="ow">and</span> <span class="n">r</span><span class="o">.</span><span class="n">is_formula</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">Truth</span><span class="p">(</span>
+        <span class="n">DefinedConstant</span><span class="p">,</span>
+        <span class="n">definiendum</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">,</span>
+        <span class="n">definiens</span><span class="o">=</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span>           <span class="c1"># ()</span>
+            <span class="n">Equal</span><span class="p">(</span><span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="n">p</span><span class="p">,</span> <span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="n">p</span><span class="p">))(</span>
+                <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">bool_</span><span class="p">))):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Truth (:math:`⊤`).</span>
+
+<span class="sd">    Constructs the true formula.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Constant`:</span>
+<span class="sd">       :math:`⊤`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">And</span><span class="p">(</span>
+        <span class="n">DefinedInfixOperator</span><span class="p">,</span>
+        <span class="n">definiendum</span><span class="o">=</span><span class="s1">&#39;and&#39;</span><span class="p">,</span>
+        <span class="n">definiens</span><span class="o">=</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span>     <span class="c1"># (form, form)</span>
+            <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">Equal</span><span class="p">(</span><span class="n">f</span> <span class="o">&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">),</span> <span class="n">f</span> <span class="o">&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">T</span><span class="p">)))(</span>
+                <span class="o">*</span><span class="n">Variables</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="n">bool_</span><span class="p">),</span>
+                <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">FunctionType</span><span class="p">(</span><span class="n">bool_</span><span class="p">,</span> <span class="n">bool_</span><span class="p">,</span> <span class="n">bool_</span><span class="p">)),</span>
+                <span class="n">Truth</span><span class="p">()),</span>
+        <span class="n">associativity</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Conjunction (:math:`∧`).</span>
+
+<span class="sd">    Constructs a logical conjunction by applying constructor</span>
+<span class="sd">    :math:`(\mathtt{and} : \mathtt{bool} → \mathtt{bool} → \mathtt{bool})`</span>
+<span class="sd">    to `arg1` and `arg2`.</span>
+
+<span class="sd">    Conjunction is right-associative: If more than two arguments are given,</span>
+<span class="sd">    the result is right-folded.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1 (:class:`Formula`): :math:`p_1`</span>
+<span class="sd">       arg2 (:class:`Formula`): :math:`p_2`</span>
+<span class="sd">       args: Remaining :class:`Formula`&#39;s.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Application`:</span>
+<span class="sd">       :math:`p_1 ∧ (p_2 ∧ (… ∧ (p_{n-1} ∧ p_n)))`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Implies</span><span class="p">(</span>
+        <span class="n">DefinedInfixOperator</span><span class="p">,</span>
+        <span class="n">definiendum</span><span class="o">=</span><span class="s1">&#39;implies&#39;</span><span class="p">,</span>
+        <span class="n">definiens</span><span class="o">=</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span>        <span class="c1"># (form, form)</span>
+            <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">Iff</span><span class="p">(</span><span class="n">And</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">),</span> <span class="n">p</span><span class="p">))(</span>
+                <span class="o">*</span><span class="n">Variables</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="n">bool_</span><span class="p">)),</span>
+        <span class="n">associativity</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Implication (:math:`→`).</span>
+
+<span class="sd">    Constructs a logical implication by applying constructor</span>
+<span class="sd">    :math:`(\mathtt{implies} : \mathtt{bool} → \mathtt{bool} → \mathtt{bool})`</span>
+<span class="sd">    to `arg1` and `arg2`.</span>
+
+<span class="sd">    Implication is right-associative: If more than two arguments are given,</span>
+<span class="sd">    the result is right-folded.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1 (:class:`Formula`): :math:`p_1`.</span>
+<span class="sd">       arg2 (:class:`Formula`): :math:`p_2`.</span>
+<span class="sd">       args: Remaining :class:`Formula`&#39;s.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Application`:</span>
+<span class="sd">       :math:`p_1 → (p_2 → (… → (p_{n-1} → p_n)))`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Forall</span><span class="p">(</span>
+        <span class="n">DefinedBinder</span><span class="p">,</span>
+        <span class="n">definiendum</span><span class="o">=</span><span class="s1">&#39;forall&#39;</span><span class="p">,</span>
+        <span class="n">definiens</span><span class="o">=</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span>     <span class="c1"># (var, form)</span>
+            <span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="n">Equal</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">T</span><span class="p">))(</span>
+                <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">FunctionType</span><span class="p">(</span><span class="n">TypeVariable</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="n">bool_</span><span class="p">)),</span>
+                <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">TypeVariable</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)),</span>
+                <span class="n">Truth</span><span class="p">())):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Universal quantification (:math:`∀`).</span>
+
+<span class="sd">    Constructs a universally quantified formula by applying constructor</span>
+<span class="sd">    :math:`(\mathtt{forall} : (𝛼 → \mathtt{bool}) → \mathtt{bool})`</span>
+<span class="sd">    to the predicate resulting from abstracting `arg1` over `arg2`.</span>
+
+<span class="sd">    Universal quantification is right-associative: If more than two</span>
+<span class="sd">    arguments are given, the result is right-folded.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1 (:class:`Variable`): :math:`x_1`.</span>
+<span class="sd">       arg2 (:class:`Variable` or :class:`Formula`): :math:`p`.</span>
+<span class="sd">       args: Remaining :class:`Variable`&#39;s followed by a :class:`Formula`.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Application`:</span>
+<span class="sd">       :math:`∀ x_1, (∀ x_2, (…, (∀ x_{n-1}, (∀ x_n, p))))`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Falsity</span><span class="p">(</span>
+        <span class="n">DefinedConstant</span><span class="p">,</span>
+        <span class="n">definiendum</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">,</span>
+        <span class="n">definiens</span><span class="o">=</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span>           <span class="c1"># ()</span>
+            <span class="n">Forall</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">p</span><span class="p">))(</span>
+                <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">bool_</span><span class="p">))):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Falsity (:math:`⊥`).</span>
+
+<span class="sd">    Constructs the false formula.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Constant`:</span>
+<span class="sd">       :math:`⊥`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Not</span><span class="p">(</span>
+        <span class="n">DefinedPrefixOperator</span><span class="p">,</span>
+        <span class="n">definiendum</span><span class="o">=</span><span class="s1">&#39;not&#39;</span><span class="p">,</span>
+        <span class="n">definiens</span><span class="o">=</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">F</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="n">Implies</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">F</span><span class="p">))(</span>
+                <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">bool_</span><span class="p">),</span>
+                <span class="n">Falsity</span><span class="p">())):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Negation (:math:`¬`).</span>
+
+<span class="sd">    Constructs a logical negation by applying constructor</span>
+<span class="sd">    :math:`(\mathtt{not} : \mathtt{bool} → \mathtt{bool})`</span>
+<span class="sd">    to `arg1`.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1 (:class:`Formula`): :math:`p`</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Application`:</span>
+<span class="sd">       :math:`¬p`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Or</span><span class="p">(</span>
+        <span class="n">DefinedInfixOperator</span><span class="p">,</span>
+        <span class="n">definiendum</span><span class="o">=</span><span class="s1">&#39;or&#39;</span><span class="p">,</span>
+        <span class="n">definiens</span><span class="o">=</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span>     <span class="c1"># (form, form)</span>
+            <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">Forall</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">Implies</span><span class="p">(</span><span class="n">Implies</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">Implies</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">r</span><span class="p">)))(</span>
+                <span class="o">*</span><span class="n">Variables</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">bool_</span><span class="p">)),</span>
+        <span class="n">associativity</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Disjunction (:math:`∨`).</span>
+
+<span class="sd">    Constructs a logical disjunction by applying constructor</span>
+<span class="sd">    :math:`(\mathtt{or} : \mathtt{bool} → \mathtt{bool} → \mathtt{bool})` to</span>
+<span class="sd">    `arg1` and `arg2`.</span>
+
+<span class="sd">    Disjunction is right-associative: If more than two arguments are given,</span>
+<span class="sd">    the result is right-folded.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1 (:class:`Formula`): :math:`p_1`</span>
+<span class="sd">       arg2 (:class:`Formula`): :math:`p_2`</span>
+<span class="sd">       args: Remaining :class:`Formula`&#39;s.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Application`:</span>
+<span class="sd">       :math:`p_1 ∨ (p_2 ∨ (… ∨ (p_{n-1} ∨ p_n)))`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Exists</span><span class="p">(</span>
+        <span class="n">DefinedBinder</span><span class="p">,</span>
+        <span class="n">definiendum</span><span class="o">=</span><span class="s1">&#39;exists&#39;</span><span class="p">,</span>
+        <span class="n">definiens</span><span class="o">=</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span>     <span class="c1"># (var, form)</span>
+            <span class="p">(</span><span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="n">Forall</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">Implies</span><span class="p">((</span><span class="n">Forall</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Implies</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">q</span><span class="p">))),</span> <span class="n">q</span><span class="p">))))(</span>
+                <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">FunctionType</span><span class="p">(</span><span class="n">TypeVariable</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="n">bool_</span><span class="p">)),</span>
+                <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="n">bool_</span><span class="p">),</span>
+                <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">TypeVariable</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)))):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Existential quantification (:math:`∃`).</span>
+
+<span class="sd">    Constructs an existentially quantified formula by applying constructor</span>
+<span class="sd">    :math:`(\mathtt{exists} : (𝛼 → \mathtt{bool}) → \mathtt{bool})` to the</span>
+<span class="sd">    predicate resulting from abstracting `arg1` over `arg2`.</span>
+
+<span class="sd">    Existential quantification is right-associative: If more than two</span>
+<span class="sd">    arguments are given, the result is right-folded.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1 (:class:`Variable`): :math:`x_1`.</span>
+<span class="sd">       arg2 (:class:`Variable` or :class:`Formula`): :math:`p`.</span>
+<span class="sd">       args: Remaining :class:`Variable`&#39;s followed by a :class:`Formula`.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Application`:</span>
+<span class="sd">       :math:`∃ x_1, (∃ x_2, (…, (∃ x_{n-1}, (∃ x_n, p))))`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Exists1</span><span class="p">(</span>
+        <span class="n">DefinedBinder</span><span class="p">,</span>
+        <span class="n">definiendum</span><span class="o">=</span><span class="s1">&#39;exists1&#39;</span><span class="p">,</span>
+        <span class="n">definiens</span><span class="o">=</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span>     <span class="c1"># (var, form)</span>
+            <span class="p">(</span><span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="n">And</span><span class="p">(</span>
+                <span class="n">Exists</span><span class="o">.</span><span class="n">constructor</span><span class="p">(</span><span class="n">p</span><span class="p">),</span>
+                <span class="n">Forall</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">Implies</span><span class="p">(</span><span class="n">And</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">p</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span> <span class="n">Equal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))))))(</span>
+                    <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">FunctionType</span><span class="p">(</span><span class="n">TypeVariable</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="n">bool_</span><span class="p">)),</span>
+                    <span class="o">*</span><span class="n">Variables</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">TypeVariable</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)))):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Unique existential quantification (:math:`∃!`).</span>
+
+<span class="sd">    Constructs a unique existentially quantified formula by applying</span>
+<span class="sd">    constructor</span>
+<span class="sd">    :math:`(\mathtt{exists1} : (𝛼 → \mathtt{bool}) → \mathtt{bool})` to the</span>
+<span class="sd">    predicate resulting from abstracting `arg1` over `arg2`.</span>
+
+<span class="sd">    Unique existential quantification is right-associative: If more than two</span>
+<span class="sd">    arguments are given, the result is right-folded.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       arg1 (:class:`Variable`): :math:`x_1`.</span>
+<span class="sd">       arg2 (:class:`Variable` or :class:`Formula`): :math:`p`.</span>
+<span class="sd">       args: Remaining :class:`Variable`&#39;s followed by a :class:`Formula`.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Application`:</span>
+<span class="sd">       :math:`∃! x_1, (∃! x_2, (…, (∃! x_{n-1}, (∃! x_n, p))))`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="n">equal</span> <span class="o">=</span> <span class="n">Equal</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">true</span> <span class="o">=</span> <span class="n">Truth</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">false</span> <span class="o">=</span> <span class="n">Falsity</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">not_</span> <span class="o">=</span> <span class="n">Not</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">and_</span> <span class="o">=</span> <span class="n">And</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">or_</span> <span class="o">=</span> <span class="n">Or</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">iff</span> <span class="o">=</span> <span class="n">Iff</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">implies</span> <span class="o">=</span> <span class="n">Implies</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">exists</span> <span class="o">=</span> <span class="n">Exists</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">exists1</span> <span class="o">=</span> <span class="n">Exists1</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">forall</span> <span class="o">=</span> <span class="n">Forall</span><span class="o">.</span><span class="n">constructor</span>
+<span class="n">eq</span> <span class="o">=</span> <span class="n">Equal</span><span class="o">.</span><span class="n">eq</span>
+<span class="n">ne</span> <span class="o">=</span> <span class="n">Equal</span><span class="o">.</span><span class="n">ne</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, IBM Corp.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

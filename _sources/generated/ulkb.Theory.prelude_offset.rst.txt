@@ -1,0 +1,6 @@
+﻿ulkb.Theory.prelude\_offset
+===========================
+
+.. currentmodule:: ulkb
+
+.. autoproperty:: Theory.prelude_offset

@@ -1,0 +1,6 @@
+﻿ulkb.Object.from\_ast
+=====================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.from_ast

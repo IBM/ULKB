@@ -1,0 +1,6 @@
+﻿ulkb.Object.equal
+=================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.equal

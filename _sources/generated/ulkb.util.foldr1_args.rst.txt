@@ -1,0 +1,6 @@
+﻿ulkb.util.foldr1\_args
+======================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: foldr1_args

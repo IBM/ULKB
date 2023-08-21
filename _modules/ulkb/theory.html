@@ -1,0 +1,1520 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ulkb.theory &#8212; ulkb  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/ulkb/theory';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">ulkb  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../object.html">
+                        Object
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../expression.html">
+                        Expression
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../type_constructor.html">
+                        Type constructor
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../type.html">
+                        Type
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../term.html">
+                        Term
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../prelude.html">
+                        Prelude
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../extension.html">
+                        Extension
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../theory.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../commands.html">
+                        Commands
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../conversion.html">
+                        Conversion, parsing, serialization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../more.html">
+                        Appendix: More object methods
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../util.html">
+                        Appendix: Utilities
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../object.html">
+                        Object
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../expression.html">
+                        Expression
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../type_constructor.html">
+                        Type constructor
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../type.html">
+                        Type
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../term.html">
+                        Term
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../prelude.html">
+                        Prelude
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../extension.html">
+                        Extension
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../theory.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../commands.html">
+                        Commands
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../conversion.html">
+                        Conversion, parsing, serialization
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../more.html">
+                        Appendix: More object methods
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../util.html">
+                        Appendix: Utilities
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">ulkb.theory</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for ulkb.theory</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2023 IBM Corp.</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
+
+<span class="kn">import</span> <span class="nn">importlib</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">error</span><span class="p">,</span> <span class="n">util</span>
+<span class="kn">from</span> <span class="nn">.expression</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.extension</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.object</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.rule</span> <span class="kn">import</span> <span class="n">RuleAxiom</span>
+<span class="kn">from</span> <span class="nn">.theory_settings</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Theory&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="Theory">
+<a class="viewcode-back" href="../../theory.html#ulkb.Theory">[docs]</a>
+<span class="k">class</span> <span class="nc">Theory</span><span class="p">(</span><span class="n">Object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The state of the logic developments so far.</span>
+
+<span class="sd">    A :class:`Theory` consists of a sequence of extensions</span>
+<span class="sd">    (:class:`Extension`).</span>
+
+<span class="sd">    Multiple :class:`Theory` objects can coexist, but at any time only one</span>
+<span class="sd">    of them is the current or *top* theory.  By default, :doc:`commands</span>
+<span class="sd">    &lt;commands&gt;` and other top-level functions operate over the top theory.</span>
+
+<span class="sd">    The top theory can be accessed using :attr:`Theory.top` or :func:`_thy`.</span>
+<span class="sd">    It can be changed using :func:`Theory.push` and restored using</span>
+<span class="sd">    :func:`Theory.pop`.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">       args: Extensions.</span>
+<span class="sd">       load_prelude: Whether to load the standard prelude.</span>
+<span class="sd">       kwargs: Annotations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       :class:`Theory`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1">#: The top theory.</span>
+    <span class="n">top</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1">#: Theory stack.</span>
+    <span class="n">_stack</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1">#: Prefix of the prelude module (initialized by __init__.py).</span>
+    <span class="n">_prelude_prefix</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_dup</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">load_prelude</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_check_args</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">theory</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Theory</span><span class="p">):</span>
+            <span class="n">thy</span> <span class="o">=</span> <span class="n">theory</span> <span class="k">if</span> <span class="n">theory</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_thy</span><span class="p">()</span>
+            <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">thy</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">return</span> <span class="n">thy</span><span class="p">,</span> <span class="n">args</span>
+
+<div class="viewcode-block" id="Theory.push">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.push.html#ulkb.Theory.push">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">theory</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Pushes `theory` onto theory stack.</span>
+
+<span class="sd">        Makes `theory` the new top theory.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           theory: :class:`Theory`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           `theory`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">_stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">theory</span><span class="p">)</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">top</span> <span class="o">=</span> <span class="n">theory</span>
+        <span class="k">return</span> <span class="n">theory</span></div>
+
+
+<div class="viewcode-block" id="Theory.pop">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.pop.html#ulkb.Theory.pop">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Pops theory from theory stack.</span>
+
+<span class="sd">        Makes the theory immediately below the popped one the new top</span>
+<span class="sd">        theory.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           The popped theory.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_stack</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span>
+        <span class="n">theory</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">top</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">theory</span></div>
+
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;_cached_ids&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_type_constructors&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_type_constructors_dict&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_constants&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_constants_dict&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_axioms_dict&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_definitions_dict&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_theorems_dict&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_python_type_aliases_dict&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_python_type_alias_specs_dict&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_cached_type_specs_dict&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_prelude&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_prelude_offset&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_settings&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">load_prelude</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span> <span class="o">=</span> <span class="n">TheorySettings</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">load_prelude</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_prelude</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_prelude</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_prelude_offset</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_prelude</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_prelude_offset</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_extend</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">err_type</span><span class="p">,</span> <span class="n">err_val</span><span class="p">,</span> <span class="n">err_bt</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">err_val</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">err_val</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_set_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>  <span class="c1"># make args mutable</span>
+
+    <span class="k">def</span> <span class="nf">_reset_object_caches</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_hash</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_hexdigest</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_build_ids_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_type_constructors_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_type_constructors_dict_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_constants_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_constants_dict_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_axioms_dict_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_definitions_dict_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_theorems_dict_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_python_type_aliases_dict_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_python_type_alias_specs_dict_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_build_type_specs_dict_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="c1"># -- Modules -----------------------------------------------------------</span>
+
+<div class="viewcode-block" id="Theory.load">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.load.html#ulkb.Theory.load">[docs]</a>
+    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mod_name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Loads module into theory.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           mod_name: Module name.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           The loaded module.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">mod_name</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+                <span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">mod_name</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">mod_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">mod_name</span><span class="p">]</span></div>
+
+
+    <span class="c1"># -- Prelude -----------------------------------------------------------</span>
+
+    <span class="k">def</span> <span class="nf">_load_prelude</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">ModuleType</span>
+        <span class="n">mod</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_prelude_prefix</span> <span class="o">+</span> <span class="s1">&#39;.prelude&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">mod</span><span class="p">):</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">ModuleType</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mod</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">prelude</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Prelude module or ``None`` (not loaded).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_prelude</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Theory.get_prelude">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.get_prelude.html#ulkb.Theory.get_prelude">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_prelude</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets prelude module.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Prelude module or ``None`` (not loaded).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prelude</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">prelude_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start index of non-prelude extensions.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_prelude_offset</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Theory.get_prelude_offset">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.get_prelude_offset.html#ulkb.Theory.get_prelude_offset">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_prelude_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets start index of non-prelude extensions.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Start index of non-prelude extensions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prelude_offset</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">args_no_prelude</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Theory arguments excluding prelude extensions.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_args_no_prelude</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Theory.get_args_no_prelude">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.get_args_no_prelude.html#ulkb.Theory.get_args_no_prelude">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_args_no_prelude</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets theory arguments excluding prelude extensions.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Theory arguments excluding prelude extensions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_prelude_offset</span><span class="p">:]</span></div>
+
+
+    <span class="c1"># -- Settings ----------------------------------------------------------</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Theory settings table.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :class:`ulkb.theory_settings.TheorySettings`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_settings</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Theory.get_settings">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.get_settings.html#ulkb.Theory.get_settings">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets theory settings table.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Theory settings table.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :class:`ulkb.theory_settings.TheorySettings`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span></div>
+
+
+    <span class="c1"># -- Adding extensions -------------------------------------------------</span>
+
+<div class="viewcode-block" id="Theory.extend">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.extend.html#ulkb.Theory.extend">[docs]</a>
+    <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ext</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds extension.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           ext: :class:`Extension`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           `ext`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           ExtensionError: `ext` cannot be added to theory.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`extend`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extend</span><span class="p">(</span><span class="n">Extension</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">ext</span><span class="p">))</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_extend</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">ext</span><span class="p">,</span> <span class="n">func_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">arg_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">arg_position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ext</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ext</span>          <span class="c1"># nothing to do</span>
+        <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">ext</span><span class="o">.</span><span class="n">id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ids</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ext</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;extension &#39;</span><span class="si">{</span><span class="n">ext</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&#39; already exists&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_type_constructor</span><span class="p">():</span>
+            <span class="k">pass</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_constant</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">const</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_constant</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_extension_types</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span> <span class="n">const</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_axiom</span><span class="p">():</span>
+            <span class="n">const</span><span class="p">,</span> <span class="n">form</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_axiom</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_extension_types</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span> <span class="n">form</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cache_extension</span><span class="p">(</span><span class="n">NewConstant</span><span class="p">(</span><span class="n">const</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_definition</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">form</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_definition</span><span class="p">()</span>
+            <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">_unpack_equal</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_extension_types</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span> <span class="n">form</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cache_extension</span><span class="p">(</span><span class="n">NewConstant</span><span class="p">(</span><span class="n">Constant</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">l</span><span class="o">.</span><span class="n">type</span><span class="p">)))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_extension_constants</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_theorem</span><span class="p">():</span>
+            <span class="n">const</span><span class="p">,</span> <span class="n">seq</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_extension</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">form</span> <span class="ow">in</span> <span class="n">util</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="n">seq</span><span class="o">.</span><span class="n">hypotheses</span><span class="p">,</span> <span class="p">[</span><span class="n">seq</span><span class="o">.</span><span class="n">conclusion</span><span class="p">]):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_check_extension_types</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span> <span class="n">form</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cache_extension</span><span class="p">(</span><span class="n">NewConstant</span><span class="p">(</span><span class="n">const</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_python_type_alias</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">spec</span><span class="p">)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_python_type_alias</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_extension_types</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">spec</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">ext</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;undefined type alias spec &#39;</span><span class="si">{</span><span class="n">spec</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_type_spec</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">spec</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_type_spec</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">ext</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;undefined type spec &#39;</span><span class="si">{</span><span class="n">spec</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cache_extension</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ext</span>
+
+    <span class="k">def</span> <span class="nf">_check_extension_constants</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ext</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">term</span><span class="o">.</span><span class="n">constants</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">constants_dict</span>
+                <span class="ow">or</span> <span class="ow">not</span> <span class="n">util</span><span class="o">.</span><span class="n">any_map</span><span class="p">(</span>
+                    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">c</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">matches</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">type</span><span class="p">),</span> <span class="n">term</span><span class="o">.</span><span class="n">constants</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="n">ext</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;undefined constant &#39;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">term</span>
+
+    <span class="k">def</span> <span class="nf">_check_extension_types</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ext</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">type_constructors</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_constructors</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">term</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">error</span><span class="o">.</span><span class="n">_build_plural_message</span><span class="p">(</span>
+                <span class="s1">&#39;undefined type constructor</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="o">*</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">type_constructors</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_constructors</span><span class="p">))</span>
+            <span class="k">raise</span> <span class="n">ext</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_cache_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ext</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="n">ext</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">ext</span>
+        <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_type_constructor</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">tcons</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_type_constructor</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_constructors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tcons</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_constructors_dict</span><span class="p">[</span><span class="n">tcons</span><span class="p">]</span> <span class="o">=</span> <span class="n">tcons</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_constructors_dict</span><span class="p">[</span><span class="n">tcons</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">tcons</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_constant</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">const</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_constant</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">constants_dict</span><span class="p">[</span><span class="n">const</span><span class="p">]</span> <span class="o">=</span> <span class="n">const</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">constants_dict</span><span class="p">[</span><span class="n">const</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">const</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_axiom</span><span class="p">():</span>
+            <span class="n">const</span><span class="p">,</span> <span class="n">form</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_axiom</span><span class="p">()</span>
+            <span class="n">seq</span> <span class="o">=</span> <span class="n">RuleAxiom</span><span class="p">(</span><span class="n">form</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">axioms_dict</span><span class="p">[</span><span class="n">const</span><span class="p">]</span> <span class="o">=</span> <span class="n">seq</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">axioms_dict</span><span class="p">[</span><span class="n">const</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">seq</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_definition</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">form</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_definition</span><span class="p">()</span>
+            <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">_unpack_equal</span><span class="p">()</span>
+            <span class="n">const</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">constants_dict</span><span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+            <span class="n">seq</span> <span class="o">=</span> <span class="n">RuleAxiom</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Equal</span><span class="p">(</span><span class="n">const</span><span class="p">,</span> <span class="n">r</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">definitions_dict</span><span class="p">[</span><span class="n">const</span><span class="p">]</span> <span class="o">=</span> <span class="n">seq</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">definitions_dict</span><span class="p">[</span><span class="n">const</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">seq</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_theorem</span><span class="p">():</span>
+            <span class="n">const</span><span class="p">,</span> <span class="n">seq</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_theorem</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theorems_dict</span><span class="p">[</span><span class="n">const</span><span class="p">]</span> <span class="o">=</span> <span class="n">seq</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theorems_dict</span><span class="p">[</span><span class="n">const</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">seq</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_python_type_alias</span><span class="p">():</span>
+            <span class="n">py_type</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">spec</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_python_type_alias</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">python_type_aliases_dict</span><span class="p">[</span><span class="n">py_type</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">=</span> <span class="nb">type</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">python_type_aliases_dict</span><span class="p">[</span><span class="n">py_type</span><span class="p">]</span> <span class="o">=</span> <span class="nb">type</span>
+            <span class="k">if</span> <span class="n">spec</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">spec</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">python_type_alias_specs_dict</span><span class="p">[</span><span class="n">py_type</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">=</span> <span class="n">spec</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">python_type_alias_specs_dict</span><span class="p">[</span><span class="n">py_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">spec</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_type_spec</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">spec</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_type_spec</span><span class="p">()</span>
+            <span class="n">spec</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_specs_dict</span><span class="p">[</span><span class="n">spec</span><span class="o">.</span><span class="n">constructor</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">spec</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_specs_dict</span><span class="p">[</span><span class="n">spec</span><span class="o">.</span><span class="n">constructor</span><span class="p">]</span> <span class="o">=</span> <span class="n">spec</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reset_object_caches</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_uncache_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ext</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ids</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">ext</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_type_constructor</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">tcons</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_type_constructor</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_constructors</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">tcons</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_constructors_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">tcons</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_constructors_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">tcons</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_constant</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">const</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_constant</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_uncache_constant</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_axiom</span><span class="p">():</span>
+            <span class="n">const</span><span class="p">,</span> <span class="n">form</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_axiom</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_uncache_constant</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">axioms_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">axioms_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">const</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_definition</span><span class="p">():</span>
+            <span class="p">(</span><span class="n">form</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_definition</span><span class="p">()</span>
+            <span class="n">l</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">_unpack_equal</span><span class="p">()</span>
+            <span class="n">const</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lookup_constant</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_uncache_constant</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">definitions_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">definitions_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">const</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_theorem</span><span class="p">():</span>
+            <span class="n">const</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_theorem</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_uncache_constant</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theorems_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theorems_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">const</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">is_new_python_type_alias</span><span class="p">():</span>
+            <span class="n">py_type</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">spec</span> <span class="o">=</span> <span class="n">ext</span><span class="o">.</span><span class="n">_unpack_new_python_type_alias</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">python_type_aliases_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">py_type</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">python_type_aliases_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">py_type</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">spec</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">python_type_alias_specs_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">py_type</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">python_type_alias_specs_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">py_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">should_not_get_here</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reset_object_caches</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_uncache_constant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">const</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constants_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">const</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constants_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">const</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Theory.new_base_type">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.new_base_type.html#ulkb.Theory.new_base_type">[docs]</a>
+    <span class="k">def</span> <span class="nf">new_base_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds new base type.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg1: Id.</span>
+<span class="sd">           kwargs: Annotations.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`TypeApplication`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Equivalent to:</span>
+
+<span class="sd">           self.extend(NewTypeConstructor(</span>
+<span class="sd">              TypeConstructor(arg1, 0, None, **kwargs)))[0]()</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`new_base_type`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_type_constructor</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)()</span></div>
+
+
+<div class="viewcode-block" id="Theory.new_type_constructor">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.new_type_constructor.html#ulkb.Theory.new_type_constructor">[docs]</a>
+    <span class="k">def</span> <span class="nf">new_type_constructor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds new type constructor.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg1: Id.</span>
+<span class="sd">           arg2: Arity.</span>
+<span class="sd">           arg3: Associativity (``&#39;left&#39;`` or ``&#39;right&#39;``).</span>
+<span class="sd">           kwargs: Annotations.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`TypeConstructor`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Equivalent to:</span>
+
+<span class="sd">           self.extend(NewTypeConstructor(</span>
+<span class="sd">              TypeConstructor(arg1, arg2, arg3, **kwargs)))[0]</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`new_type_constructor`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extend</span><span class="p">(</span><span class="n">NewTypeConstructor</span><span class="p">(</span>
+            <span class="n">TypeConstructor</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Theory.new_constant">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.new_constant.html#ulkb.Theory.new_constant">[docs]</a>
+    <span class="k">def</span> <span class="nf">new_constant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds new constant.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg1: Id.</span>
+<span class="sd">           arg2: :class:`Type`.</span>
+<span class="sd">           kwargs: Annotations.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Constant`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Equivalent to:</span>
+
+<span class="sd">           self.extend(NewConstant(Constant(arg1, arg2, **kwargs)))[0]</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">          :func:`new_constant`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extend</span><span class="p">(</span><span class="n">NewConstant</span><span class="p">(</span><span class="n">Constant</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Theory.new_axiom">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.new_axiom.html#ulkb.Theory.new_axiom">[docs]</a>
+    <span class="k">def</span> <span class="nf">new_axiom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds new axiom.</span>
+
+<span class="sd">        If `arg2` is not given, uses `arg1` to generate an id.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg1: Id or :class:`Formula`.</span>
+<span class="sd">           arg2: :class:`Formula`.</span>
+<span class="sd">           kwargs: Annotations.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Sequent`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Equivalent to:</span>
+
+<span class="sd">           self.extend(NewAxiom(</span>
+<span class="sd">              Constant(arg1, arg2.type), arg2, **kwargs));</span>
+<span class="sd">           self.axioms_dict[arg1]</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`new_axiom`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">arg2</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">arg2</span><span class="p">,</span> <span class="n">arg1</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg1</span><span class="o">.</span><span class="n">_as_id</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extend</span><span class="p">(</span><span class="n">NewAxiom</span><span class="p">(</span><span class="n">Constant</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="o">.</span><span class="n">type</span><span class="p">),</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">axioms_dict</span><span class="p">[</span><span class="n">arg1</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Theory.new_definition">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.new_definition.html#ulkb.Theory.new_definition">[docs]</a>
+    <span class="k">def</span> <span class="nf">new_definition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds new definition.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg1: Id.</span>
+<span class="sd">           arg2: :class:`Term`.</span>
+<span class="sd">           kwargs: Annotations.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Constant`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Equivalent to:</span>
+
+<span class="sd">           self.extend(NewDefinition(</span>
+<span class="sd">              Equal(Constant(arg1, arg2.type), arg2), **kwargs));</span>
+<span class="sd">           self.constants_dict[arg1]</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`new_definition`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extend</span><span class="p">(</span><span class="n">NewDefinition</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Equal</span><span class="p">(</span><span class="n">Variable</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="o">.</span><span class="n">type</span><span class="p">),</span> <span class="n">arg2</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">constants_dict</span><span class="p">[</span><span class="n">arg1</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Theory.new_theorem">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.new_theorem.html#ulkb.Theory.new_theorem">[docs]</a>
+    <span class="k">def</span> <span class="nf">new_theorem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds new theorem.</span>
+
+<span class="sd">        If `arg2` is not given, uses `arg1` to generate an id.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg1: Id or :class:`Sequent`.</span>
+<span class="sd">           arg2: :class:`Sequent`.</span>
+<span class="sd">           kwargs: Annotations.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Sequent`</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Equivalent to:</span>
+
+<span class="sd">           extend(NewTheorem(</span>
+<span class="sd">              Constant(arg1, BoolType()), arg2), **kwargs));</span>
+<span class="sd">           self.theorems_dict[arg1]</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`new_theorem`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">arg2</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">arg2</span><span class="p">,</span> <span class="n">arg1</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg1</span><span class="o">.</span><span class="n">_as_id</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extend</span><span class="p">(</span><span class="n">NewTheorem</span><span class="p">(</span><span class="n">Constant</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">theorems_dict</span><span class="p">[</span><span class="n">arg1</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Theory.new_python_type_alias">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.new_python_type_alias.html#ulkb.Theory.new_python_type_alias">[docs]</a>
+    <span class="k">def</span> <span class="nf">new_python_type_alias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds new Python type alias.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg1: Python type.</span>
+<span class="sd">           arg2: :class:`Type`.</span>
+<span class="sd">           arg3: Type specification.</span>
+<span class="sd">           kwargs: Annotations.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Type`.</span>
+
+<span class="sd">        .. code-block:: python</span>
+<span class="sd">           :caption: Equivalent to:</span>
+
+<span class="sd">           extend(NewPythonTypeAlias(arg1, arg2, **kwargs))[1]</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`new_python_type_alias`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extend</span><span class="p">(</span><span class="n">NewPythonTypeAlias</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span></div>
+
+
+    <span class="c1"># -- Removing extensions -----------------------------------------------</span>
+
+<div class="viewcode-block" id="Theory.reset">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.reset.html#ulkb.Theory.reset">[docs]</a>
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Removes all extensions since *arg* (inclusive).</span>
+
+<span class="sd">        If `arg` is an id, goes back to the extension preceding the one</span>
+<span class="sd">        introducing the object with id `arg`.</span>
+
+<span class="sd">        If `arg` is an object, goes back to the extension preceding the one</span>
+<span class="sd">        introducing `arg`.</span>
+
+<span class="sd">        If `arg` is a non-negative integer, goes back to the extension</span>
+<span class="sd">        preceding the one at offset `arg`.</span>
+
+<span class="sd">        If `arg` is a negative integer, drops the last `abs(arg)`</span>
+<span class="sd">        extensions.</span>
+
+<span class="sd">        If `arg` is not given, goes back to the initial state; i.e., makes</span>
+<span class="sd">        `arg` equal to :attr:`Theory.prelude_offset`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg: Id, :class:`Object`, or int.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           The number of extensions removed.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           LookupError: `arg` not in theory.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">arg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">prelude_offset</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">arg</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="n">arg</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span> <span class="o">+</span> <span class="n">arg</span>
+        <span class="k">elif</span> <span class="n">Object</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">Extension</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="ow">and</span> <span class="n">arg</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">):</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lookup_extension</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;no such extension &#39;</span><span class="si">{</span><span class="n">arg</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>                   <span class="c1"># arg is an id</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lookup_extension</span><span class="p">(</span><span class="n">arg</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">prelude_offset</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_prelude_offset</span> <span class="o">=</span> <span class="n">start</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">start</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">ext</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_uncache_extension</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">-</span> <span class="n">start</span></div>
+
+
+    <span class="c1"># -- Querying extensions -----------------------------------------------</span>
+
+<div class="viewcode-block" id="Theory.enumerate_extensions">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.enumerate_extensions.html#ulkb.Theory.enumerate_extensions">[docs]</a>
+    <span class="k">def</span> <span class="nf">enumerate_extensions</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Enumerates extensions matching criteria.</span>
+
+<span class="sd">        If `offset` is not given, assumes :attr:`Theory.prelude_offset`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           args: Expressions that must occur in extension.</span>
+<span class="sd">           limit: Maximum number of results.</span>
+<span class="sd">           offset: Minimum offset.</span>
+<span class="sd">           id: Id (regex).</span>
+<span class="sd">           class_: Class.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           An iterator of index-:class:`Extension` pairs.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`enumerate_extensions`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span> <span class="k">if</span> <span class="n">offset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prelude_offset</span>
+        <span class="k">if</span> <span class="nb">id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_id_re</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">class_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">check_arg_is_type</span><span class="p">(</span>
+                <span class="n">class_</span><span class="p">,</span> <span class="s1">&#39;enumerate_extensions&#39;</span><span class="p">,</span> <span class="s1">&#39;class_&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">args</span><span class="p">:</span>
+            <span class="n">args_cts</span><span class="p">,</span> <span class="n">args_tcs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(),</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">arg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lookup_python_type_alias</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">pass</span>
+                <span class="n">Expression</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="s1">&#39;enumerate_extensions&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">is_term</span><span class="p">():</span>
+                    <span class="n">args_cts</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">constants</span><span class="p">)</span>
+                <span class="n">args_tcs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">type_constructors</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">offset</span><span class="p">:]):</span>
+            <span class="k">if</span> <span class="nb">id</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">_id_re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">)):</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">class_</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">class_</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">args</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">args_cts</span><span class="p">:</span>
+                    <span class="n">cts</span> <span class="o">=</span> <span class="nb">set</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">(),</span> <span class="o">*</span><span class="nb">map</span><span class="p">(</span>
+                        <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">constants</span><span class="p">,</span> <span class="nb">filter</span><span class="p">(</span><span class="n">Term</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">args</span><span class="p">)))</span>
+                    <span class="k">if</span> <span class="n">args_cts</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">(</span><span class="n">cts</span><span class="p">):</span>
+                        <span class="k">continue</span>
+                <span class="k">if</span> <span class="n">args_tcs</span><span class="p">:</span>
+                    <span class="n">tcs</span> <span class="o">=</span> <span class="nb">set</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">(),</span> <span class="o">*</span><span class="nb">map</span><span class="p">(</span>
+                        <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">type_constructors</span><span class="p">,</span>
+                        <span class="nb">filter</span><span class="p">(</span><span class="n">Expression</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">args</span><span class="p">)))</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">args_tcs</span> <span class="o">&amp;</span> <span class="n">tcs</span><span class="p">):</span>
+                        <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="n">limit</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">yield</span> <span class="p">(</span><span class="n">offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_lookup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dict_</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">):</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">dict_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">util</span><span class="o">.</span><span class="n">Nil</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">obj</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;no such </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2"> &#39;</span><span class="si">{</span><span class="n">arg</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Theory.lookup_extension">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.lookup_extension.html#ulkb.Theory.lookup_extension">[docs]</a>
+    <span class="k">def</span> <span class="nf">lookup_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">util</span><span class="o">.</span><span class="n">Nil</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for extension.</span>
+
+<span class="sd">        If `default` is given, returns it instead of raising an exception.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg: Id.</span>
+<span class="sd">           default: Value.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Extension`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           LookupError: `arg` not in theory.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`lookup_extension`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ids</span><span class="p">,</span> <span class="s1">&#39;extension&#39;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Theory.lookup_type_constructor">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.lookup_type_constructor.html#ulkb.Theory.lookup_type_constructor">[docs]</a>
+    <span class="k">def</span> <span class="nf">lookup_type_constructor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">util</span><span class="o">.</span><span class="n">Nil</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for type constructor.</span>
+
+<span class="sd">        If `default` is given, returns it instead of raising an exception.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg: Id or :class:`TypeConstructor`.</span>
+<span class="sd">           default: Value.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`TypeConstructor`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           LookupError: `arg` not in theory.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`lookup_type_constructor`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type_constructors_dict</span><span class="p">,</span> <span class="s1">&#39;type constructor&#39;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Theory.lookup_constant">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.lookup_constant.html#ulkb.Theory.lookup_constant">[docs]</a>
+    <span class="k">def</span> <span class="nf">lookup_constant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">util</span><span class="o">.</span><span class="n">Nil</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for constant.</span>
+
+<span class="sd">        If `default` is given, returns it instead of raising an exception.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg: Id or :class:`Constant`.</span>
+<span class="sd">           default: Value.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Constant`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           LookupError: `arg` not in theory.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`lookup_constant`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">constants_dict</span><span class="p">,</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Theory.lookup_axiom">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.lookup_axiom.html#ulkb.Theory.lookup_axiom">[docs]</a>
+    <span class="k">def</span> <span class="nf">lookup_axiom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">util</span><span class="o">.</span><span class="n">Nil</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for axiom.</span>
+
+<span class="sd">        If `default` is given, returns it instead of raising an exception.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg: Id or :class:`Constant`.</span>
+<span class="sd">           default: Value.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Sequent`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           LookupError: `arg` not in theory.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`lookup_axiom`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axioms_dict</span><span class="p">,</span> <span class="s1">&#39;axiom&#39;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Theory.lookup_definition">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.lookup_definition.html#ulkb.Theory.lookup_definition">[docs]</a>
+    <span class="k">def</span> <span class="nf">lookup_definition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">util</span><span class="o">.</span><span class="n">Nil</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for definition.</span>
+
+<span class="sd">        If `default` is given, returns it instead of raising an exception.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg: Id or :class:`Constant`.</span>
+<span class="sd">           default: Value.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Sequent`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           LookupError: `arg` not in theory.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`lookup_definition`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">definitions_dict</span><span class="p">,</span> <span class="s1">&#39;definition&#39;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Theory.lookup_theorem">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.lookup_theorem.html#ulkb.Theory.lookup_theorem">[docs]</a>
+    <span class="k">def</span> <span class="nf">lookup_theorem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">util</span><span class="o">.</span><span class="n">Nil</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for theorem.</span>
+
+<span class="sd">        If `default` is given, returns it instead of raising an exception.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg: Id or :class:`Constant`.</span>
+<span class="sd">           default: Value.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Sequent`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           LookupError: `arg` not in theory.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`lookup_theorem`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theorems_dict</span><span class="p">,</span> <span class="s1">&#39;theorem&#39;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Theory.lookup_python_type_alias">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.lookup_python_type_alias.html#ulkb.Theory.lookup_python_type_alias">[docs]</a>
+    <span class="k">def</span> <span class="nf">lookup_python_type_alias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">util</span><span class="o">.</span><span class="n">Nil</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for Python type alias.</span>
+
+<span class="sd">        If `default` is given, returns it instead of raising an exception.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg: Id.</span>
+<span class="sd">           default: Value.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`Type`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           LookupError: `arg` not in theory.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`lookup_python_type_alias`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">python_type_aliases_dict</span><span class="p">,</span> <span class="s1">&#39;type alias&#39;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">lookup_python_type_alias_spec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">util</span><span class="o">.</span><span class="n">Nil</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for Python type alias specification.</span>
+
+<span class="sd">        If `default` is given, returns it instead of raising an exception.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           arg: Id.</span>
+<span class="sd">           default: Value.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           Type specification.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">           LookupError: `arg` not in theory.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">python_type_alias_specs_dict</span><span class="p">,</span>
+            <span class="s1">&#39;type alias spec&#39;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+
+    <span class="c1"># -- Showing extensions ------------------------------------------------</span>
+
+<div class="viewcode-block" id="Theory.show_extensions">
+<a class="viewcode-back" href="../../generated/ulkb.Theory.show_extensions.html#ulkb.Theory.show_extensions">[docs]</a>
+    <span class="k">def</span> <span class="nf">show_extensions</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Prints extensions matching criteria.</span>
+
+<span class="sd">        If `offset` is not given, assumes :attr:`Theory.prelude_offset`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">           args: Expressions that must occur in extension.</span>
+<span class="sd">           limit: Maximum number of results.</span>
+<span class="sd">           offset: Minimum offset.</span>
+<span class="sd">           id: Id (regex).</span>
+<span class="sd">           class_: Class.</span>
+<span class="sd">           kwargs: Extra arguments to be passed to :func:`print`.</span>
+
+<span class="sd">        See also:</span>
+<span class="sd">           :func:`show_extensions`, :func:`show_type_constructors`,</span>
+<span class="sd">           :func:`show_constants`, :func:`show_axioms`,</span>
+<span class="sd">           :func:`show_definitions`, :func:`show_theorems`,</span>
+<span class="sd">           :func:`show_python_type_aliases`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sep</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;sep&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ext</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">enumerate_extensions</span><span class="p">(</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="n">class_</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">ext</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">sep</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</div>
+
+
+
+<span class="n">Theory</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">Theory</span><span class="p">(</span><span class="n">load_prelude</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, IBM Corp.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

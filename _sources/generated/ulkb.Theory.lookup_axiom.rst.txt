@@ -1,0 +1,6 @@
+﻿ulkb.Theory.lookup\_axiom
+=========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.lookup_axiom

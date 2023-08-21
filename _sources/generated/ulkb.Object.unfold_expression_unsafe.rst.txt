@@ -1,0 +1,6 @@
+﻿ulkb.Object.unfold\_expression\_unsafe
+======================================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.unfold_expression_unsafe

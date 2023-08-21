@@ -1,0 +1,6 @@
+﻿ulkb.new\_type\_constructor
+===========================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: new_type_constructor

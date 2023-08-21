@@ -1,0 +1,6 @@
+﻿ulkb.Object.to\_json
+====================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.to_json

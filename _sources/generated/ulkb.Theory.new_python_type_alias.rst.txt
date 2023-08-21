@@ -1,0 +1,6 @@
+﻿ulkb.Theory.new\_python\_type\_alias
+====================================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.new_python_type_alias

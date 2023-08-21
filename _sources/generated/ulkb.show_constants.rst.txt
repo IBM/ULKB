@@ -1,0 +1,6 @@
+﻿ulkb.show\_constants
+====================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: show_constants

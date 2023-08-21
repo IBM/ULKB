@@ -1,0 +1,6 @@
+﻿ulkb.util.match\_first
+======================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: match_first

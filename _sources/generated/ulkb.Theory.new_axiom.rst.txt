@@ -1,0 +1,6 @@
+﻿ulkb.Theory.new\_axiom
+======================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.new_axiom

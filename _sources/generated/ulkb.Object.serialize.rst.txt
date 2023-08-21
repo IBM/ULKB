@@ -1,0 +1,6 @@
+﻿ulkb.Object.serialize
+=====================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.serialize

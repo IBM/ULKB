@@ -1,0 +1,6 @@
+﻿ulkb.Theory.new\_type\_constructor
+==================================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.new_type_constructor

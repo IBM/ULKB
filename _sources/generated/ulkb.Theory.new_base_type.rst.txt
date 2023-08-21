@@ -1,0 +1,6 @@
+﻿ulkb.Theory.new\_base\_type
+===========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.new_base_type

@@ -1,0 +1,6 @@
+﻿ulkb.extend
+===========
+
+.. currentmodule:: ulkb
+
+.. autofunction:: extend

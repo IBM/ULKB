@@ -1,0 +1,6 @@
+﻿ulkb.Object.unfold\_expression
+==============================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.unfold_expression

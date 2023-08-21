@@ -1,0 +1,6 @@
+﻿ulkb.Object.check\_object
+=========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.check_object

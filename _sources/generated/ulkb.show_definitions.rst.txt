@@ -1,0 +1,6 @@
+﻿ulkb.show\_definitions
+======================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: show_definitions

@@ -1,0 +1,6 @@
+﻿ulkb.util.camel2snake
+=====================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: camel2snake

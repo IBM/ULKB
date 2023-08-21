@@ -1,0 +1,6 @@
+﻿ulkb.Theory.lookup\_theorem
+===========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.lookup_theorem

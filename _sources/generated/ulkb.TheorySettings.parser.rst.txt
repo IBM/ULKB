@@ -1,0 +1,40 @@
+﻿ulkb.TheorySettings.parser
+==========================
+
+.. currentmodule:: ulkb
+
+.. autoclass:: TheorySettings.parser
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TheorySettings.parser.__init__
+      ~TheorySettings.parser.clear
+      ~TheorySettings.parser.copy
+      ~TheorySettings.parser.deepcopy
+      ~TheorySettings.parser.get
+      ~TheorySettings.parser.items
+      ~TheorySettings.parser.keys
+      ~TheorySettings.parser.pop
+      ~TheorySettings.parser.popitem
+      ~TheorySettings.parser.recursive_items
+      ~TheorySettings.parser.setdefault
+      ~TheorySettings.parser.update
+      ~TheorySettings.parser.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TheorySettings.parser.default
+   
+   

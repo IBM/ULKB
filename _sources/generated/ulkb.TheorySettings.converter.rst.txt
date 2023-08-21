@@ -1,0 +1,40 @@
+﻿ulkb.TheorySettings.converter
+=============================
+
+.. currentmodule:: ulkb
+
+.. autoclass:: TheorySettings.converter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TheorySettings.converter.__init__
+      ~TheorySettings.converter.clear
+      ~TheorySettings.converter.copy
+      ~TheorySettings.converter.deepcopy
+      ~TheorySettings.converter.get
+      ~TheorySettings.converter.items
+      ~TheorySettings.converter.keys
+      ~TheorySettings.converter.pop
+      ~TheorySettings.converter.popitem
+      ~TheorySettings.converter.recursive_items
+      ~TheorySettings.converter.setdefault
+      ~TheorySettings.converter.update
+      ~TheorySettings.converter.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TheorySettings.converter.default
+   
+   

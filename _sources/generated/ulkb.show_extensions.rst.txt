@@ -1,0 +1,6 @@
+﻿ulkb.show\_extensions
+=====================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: show_extensions

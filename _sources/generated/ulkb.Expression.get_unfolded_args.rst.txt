@@ -1,0 +1,6 @@
+﻿ulkb.Expression.get\_unfolded\_args
+===================================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Expression.get_unfolded_args

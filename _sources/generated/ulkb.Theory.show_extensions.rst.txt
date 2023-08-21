@@ -1,0 +1,6 @@
+﻿ulkb.Theory.show\_extensions
+============================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Theory.show_extensions

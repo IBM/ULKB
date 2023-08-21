@@ -1,0 +1,6 @@
+﻿ulkb.new\_python\_type\_alias
+=============================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: new_python_type_alias

@@ -1,0 +1,6 @@
+﻿ulkb.Object.with\_annotations
+=============================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.with_annotations

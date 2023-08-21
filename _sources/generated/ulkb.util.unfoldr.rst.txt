@@ -1,0 +1,6 @@
+﻿ulkb.util.unfoldr
+=================
+
+.. currentmodule:: ulkb.util
+
+.. autofunction:: unfoldr

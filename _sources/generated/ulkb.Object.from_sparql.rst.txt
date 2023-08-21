@@ -1,0 +1,6 @@
+﻿ulkb.Object.from\_sparql
+========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.from_sparql

@@ -1,0 +1,6 @@
+﻿ulkb.Object.from\_ofn
+=====================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.from_ofn

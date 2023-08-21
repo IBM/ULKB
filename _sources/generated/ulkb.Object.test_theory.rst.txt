@@ -1,0 +1,6 @@
+﻿ulkb.Object.test\_theory
+========================
+
+.. currentmodule:: ulkb
+
+.. automethod:: Object.test_theory

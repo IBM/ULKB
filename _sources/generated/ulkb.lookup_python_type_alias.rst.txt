@@ -1,0 +1,6 @@
+﻿ulkb.lookup\_python\_type\_alias
+================================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: lookup_python_type_alias

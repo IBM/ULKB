@@ -1,0 +1,6 @@
+﻿ulkb.lookup\_axiom
+==================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: lookup_axiom

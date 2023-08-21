@@ -1,0 +1,6 @@
+﻿ulkb.show\_axioms
+=================
+
+.. currentmodule:: ulkb
+
+.. autofunction:: show_axioms
