@@ -39,7 +39,10 @@ PYTEST_INI?= pytest.ini
 PYTEST_OPTIONS?= -x
 PYTHON?= python
 TESTS?= tests
+TOX?= tox
 TOX_INI?= tox.ini
+TOX_OPTIONS?= -qq
+TOX_SETENV?=
 
 include Makefile.conf
 
@@ -217,6 +220,7 @@ gen-tox-ini:
 	@echo 'allowlist_externals = py.test' >>${TOX_INI}
 	@echo 'commands = py.test {posargs}' >>${TOX_INI}
 	@echo 'extras = test' >>${TOX_INI}
+	@echo 'passenv = *' >>${TOX_INI}
 
 # refresh idents
 .PHONY: ident
@@ -235,6 +239,11 @@ install:
 install-deps:
 	pip install -e '.[docs]'
 	pip install -e '.[tests]'
+
+# run tox
+.PHONY: tox
+tox:
+	${TOX_SETENV} ${TOX} ${TOX_OPTIONS}
 
 # uninstall package
 .PHONY: uninstall
