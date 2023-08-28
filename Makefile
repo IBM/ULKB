@@ -25,6 +25,7 @@ CHECK_DEPS?= htmlcov-clean
 CHECK_ISORT?= yes
 CHECK_MYPY?= yes
 COVERAGERC?= .coveragerc
+COVERAGERC_EXCLUDE_LINES?=
 COVERAGERC_OMIT?=
 DOCS_SRC?= docs
 DOCS_TGT?= .docs
@@ -186,6 +187,12 @@ gen-coveragerc:
 	@echo '    @(abc\.)?abstractmethod' >>${COVERAGERC}
 	@echo '    should_not_get_here' >>${COVERAGERC}
 	@echo '    ShouldNotGetHere' >>${COVERAGERC}
+	@printf '${COVERAGERC_EXCLUDE_LINES_TAIL}' >>${COVERAGERC}
+
+COVERAGERC_EXCLUDE_LINES_TAIL=\
+  $(shell printf '${COVERAGERC_EXCLUDE_LINES}'\
+   | sed -e 's/\s*<line>/    /g' -e 's,</line>,\\n,g')
+
 
 # generate .flake8rc
 .PHONY: gen-flake8rc
