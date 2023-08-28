@@ -182,9 +182,10 @@ gen-coveragerc:
 	@echo '    raise NotImplementedError' >>${COVERAGERC}
 	@echo '    if 0:' >>${COVERAGERC}
 	@echo '    if __name__ == .__main__.:' >>${COVERAGERC}
-	@echo '    class .*\bProtocol\):' >>${COVERAGERC}
+	@echo '    class .*\\bProtocol\):' >>${COVERAGERC}
 	@echo '    @(abc\.)?abstractmethod' >>${COVERAGERC}
 	@echo '    should_not_get_here' >>${COVERAGERC}
+	@echo '    ShouldNotGetHere' >>${COVERAGERC}
 
 # generate .flake8rc
 .PHONY: gen-flake8rc
