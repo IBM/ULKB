@@ -35,11 +35,12 @@ setup(
             'pydata_sphinx_theme',
         ],
         'tests': [
+            'flake8',
             'isort',
             'mypy',
             'pytest',
-            'pytest-mypy',
             'pytest-cov',
+            'pytest-mypy',
             'tox',
         ],
     },
