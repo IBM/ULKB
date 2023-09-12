@@ -22,6 +22,7 @@ usage:
 	@perl -wnle '${perl_usage}' ${MAKEFILE_LIST}
 
 CHECK_DEPS?= htmlcov-clean
+CHECK_FLAKE8=? yes
 CHECK_ISORT?= yes
 CHECK_MYPY?= yes
 COVERAGERC?= .coveragerc
@@ -31,6 +32,7 @@ DOCS_SRC?= docs
 DOCS_TGT?= .docs
 DOCS_TGT_BRANCH?= gh-pages
 FLAKE8RC?= .flake8rc
+FLAKE8_OPTIONS?= --config .flake8rc
 ISORT_OPTIONS?= --check --diff
 MANIFEST_IN?= Manifest.in
 MANIFEST_IN_GIT_LS_FILES_PATHSPEC?=
@@ -47,6 +49,7 @@ TOX_SETENV?=
 
 include Makefile.conf
 
+CHECK_DEPS+= $(if $(filter yes,${CHECK_FLAKE8}),check-flake8)
 CHECK_DEPS+= $(if $(filter yes,${CHECK_ISORT}),check-isort)
 CHECK_DEPS+= $(if $(filter yes,${CHECK_MYPY}),check-mypy)
 PYTEST_OPTIONS+= $(if $(filter yes,${CHECK_MYPY}),--mypy)
@@ -56,10 +59,17 @@ PYTEST_OPTIONS+= $(if $(filter yes,${CHECK_MYPY}),--mypy)
 check: ${CHECK_DEPS}
 	pytest ${PYTEST_OPTIONS}
 
+# check sources using flake8
+.PHONY: check-flake8
+check-flake8:
+	${PYTHON} -m flake8 ${FLAKE8_OPTIONS} ${PACKAGE} ${TESTS}
+
+# check sources using isort
 .PHONY: check-isort
 check-isort:
 	${PYTHON} -m isort ${ISORT_OPTIONS} ${PACKAGE} ${TESTS}
 
+# check sources using mypy
 .PHONY: check-mypy
 check-mypy:
 	${PYTHON} -m mypy ${MYPY_OPTIONS} ${PACKAGE} ${TESTS}
