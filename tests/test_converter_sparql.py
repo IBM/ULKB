@@ -53,6 +53,24 @@ class TestConverterSPARQL(ULKB_TestCase):
         self.assertRaisesRegex(
             ConverterError, 'cannot convert', Forall(x, p(x, y)).to_sparql)
 
+    def test_convert_from(self):
+        a = TypeVariable('a')
+        q = Formula.from_sparql('''
+select ?x
+where {
+  {}
+  union{
+    ?x <P31> <Q5>.
+  }
+  filter (?x = "abc")
+}''')
+        self.assertEqual(q, And(
+            Or(
+                Truth(),
+                Constant('P31', FunctionType(a, a, bool))
+                (Variable('x', a), Constant('Q5', a))),
+            Equal(Variable('x', a), Constant('abc', a))))
+
     def test_convert_predicate(self):
         a = TypeVariable('a')
         x, y = Variables('x', 'y', a)

@@ -4,9 +4,9 @@
 import re
 import textwrap
 
-from rdflib import Graph, URIRef
+from rdflib import BNode, Graph, URIRef, Variable
 from rdflib.namespace import NamespaceManager
-from rdflib.plugins.sparql import prepareQuery
+from rdflib.term import Identifier
 
 from .. import error, util
 from ..settings import Settings
@@ -14,6 +14,10 @@ from .converter import Converter
 
 
 class ConverterSPARQL_Settings(Settings):
+    # from_sparql
+    domain = None              # object domain type
+    data_domain = None         # data domain type
+    # to_sparql
     indent = 2
     limit = None
     query = 'select'
@@ -33,11 +37,21 @@ class ConverterSPARQL(
         super().__init__(cls, arg, **kwargs)
         # settings
         self.settings = cls._thy().settings.converter.sparql(**kwargs)
+        self.domain = self.settings.domain
+        self.data_domain = self.settings.data_domain
         self.indent = self.settings.indent
         self.limit = self.settings.limit
         self.rdflib_query = self.settings.rdflib_query
         self.with_optional = self.settings.with_optional
         # internal attributes
+        self.ity = self.domain  # type of individuals
+        if self.ity is None:
+            self.ity = self.cls.TypeVariable('a')
+        self.dty = self.data_domain
+        if self.dty is None:    # type of data
+            self.dty = self.ity
+        self.OPty = self.cls.FunctionType(self.ity, self.ity, bool)
+        self.DPty = self.cls.FunctionType(self.ity, self.dty, bool)
         self.nsm = cls._thy().settings.graph()._get_namespace_manager(
             namespaces)
         self.namespaces = self.nsm._namespace_dict
@@ -53,12 +67,74 @@ At line {line}, column {column}:
     def error_cannot_convert(self, obj):
         return self.error(f"cannot convert '{obj}'")
 
+    def _prepare_query(self, text, namespaces=None):
+        from pyparsing.exceptions import ParseException
+        from rdflib.plugins.sparql import prepareQuery
+        try:
+            return prepareQuery(text, initNs=namespaces or self.namespaces)
+        except ParseException as err:
+            raise self.error_bad_query(
+                err.args[0], err.lineno, err.column,
+                err.explain()) from None
+        except Exception as err:
+            raise self.error(str(err)) from None
+
     def do_convert_from(self):
         # See <https://www.sciencedirect.com/science/article/pii/S1570826822000543>
-        raise NotImplementedError
+        query = self._prepare_query(self.arg)
+        return self._do_convert_from(query.algebra)
+
+    def _do_convert_from(self, part):
+        # print(f'{part.name}>', part)
+        if part.name == 'BGP':
+            stmts = list(map(self._do_convert_from_triple, part.triples))
+            if len(stmts) == 0:
+                return self.cls.Truth()
+            if len(stmts) == 1:
+                return stmts[0]
+            else:
+                return self.cls.And(*stmts)
+        if part.name == 'Filter':
+            return self.cls.And(
+                self._do_convert_from(part.p),
+                self._do_convert_from_relational_expression(part.expr))
+        elif part.name == 'Union':
+            return self.cls.Or(
+                self._do_convert_from(part.p1),
+                self._do_convert_from(part.p2))
+        elif (part.name == 'Distinct'
+              or part.name == 'Project'
+              or part.name == 'SelectQuery'
+              or part.name == 'Slice'
+              or part.name == 'Distinct'):
+            return self._do_convert_from(part.p)
+        else:
+            raise NotImplementedError
+
+    def _do_convert_from_relational_expression(self, expr):
+        if expr.op == '=':
+            assert isinstance(expr.expr, Identifier)
+            assert isinstance(expr.other, Identifier)
+            return self.cls.Equal(
+                self._do_convert_from_term(expr.expr, self.ity),
+                self._do_convert_from_term(expr.other, self.ity))
+        else:
+            raise NotImplementedError
+
+    def _do_convert_from_triple(self, triple):
+        s, p, o = triple
+        s = self._do_convert_from_term(s, self.ity)
+        p = self._do_convert_from_term(p, self.OPty)
+        o = self._do_convert_from_term(o, self.ity)
+        return p(s, o)
+
+    def _do_convert_from_term(self, term, type):
+        if isinstance(term, (BNode, Variable)):
+            return self.cls.Variable(str(term), type)
+        else:
+            return self.cls.Constant(str(term), type)
 
     def do_convert_to(self):
-        from pyparsing.exceptions import ParseException
         form = self.cls.Term.check(self.arg)
         type = self.settings.query
         if type == 'ask':
@@ -72,19 +148,12 @@ At line {line}, column {column}:
             text = self._do_convert_to_select(vars, form)
         else:
             raise self.error(f"bad query type '{type}'")
-        try:
-            query = prepareQuery(text, initNs=self.namespaces)
-            if self.rdflib_query:
-                return query
-            else:
-                prefixes = self._get_prefixes(self.nsm)
-                return prefixes + '\n' + query._original_args[0]
-        except ParseException as err:
-            raise self.error_bad_query(
-                err.args[0], err.lineno, err.column,
-                err.explain()) from None
-        except Exception as err:
-            raise self.error(str(err)) from None
+        query = self._prepare_query(text)
+        if self.rdflib_query:
+            return query
+        else:
+            prefixes = self._get_prefixes(self.nsm)
+            return prefixes + '\n' + query._original_args[0]
 
     def _do_convert_to_ask(self, form):
         return self._ask(self._formula_to_pattern(form))
