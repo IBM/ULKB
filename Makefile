@@ -177,7 +177,7 @@ docs-publish: docs-clean docs
 	cp -a ./${DOCS_SRC}/_build/html/* ./${DOCS_TGT}
 	cd ${DOCS_TGT} && git add .
 	cd ${DOCS_TGT} && git commit -m 'Update docs'
-	cd ${DOCS_TGT} && git push origin gh-pages
+	cd ${DOCS_TGT} && git push origin ${DOCS_TGT_BRANCH}
 
 # run all gen-* targets
 .PHONY: gen-all
