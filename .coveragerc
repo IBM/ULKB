@@ -12,3 +12,4 @@ exclude_lines =
     @(abc\.)?abstractmethod
     should_not_get_here
     ShouldNotGetHere
+

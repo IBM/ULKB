@@ -26,6 +26,7 @@ setup(
         'lark',
         'more_itertools',
         'rdflib',
+        'requests',
         'setuptools',
         'z3-solver',
     ],

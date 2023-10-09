@@ -47,8 +47,10 @@ PYTEST_OPTIONS?= -x
 PYTHON?= python
 TESTS?= tests
 TOX?= tox
+TOX_ENVLIST?= mypy, py{39,310,311,312}
 TOX_INI?= tox.ini
-TOX_OPTIONS?= -qq
+TOX_OPTIONS?=
+TOX_PASSENV?=
 TOX_SETENV?=
 
 include Makefile.conf
@@ -57,6 +59,9 @@ CHECK_DEPS+= $(if $(filter yes,${CHECK_FLAKE8}),check-flake8)
 CHECK_DEPS+= $(if $(filter yes,${CHECK_ISORT}),check-isort)
 CHECK_DEPS+= $(if $(filter yes,${CHECK_MYPY}),check-mypy)
 PYTEST_OPTIONS+= $(if $(filter yes,${CHECK_MYPY}),--mypy)
+
+split = $(shell printf '$(1)'\
+   | sed -e 's/\s*<line>/    /g' -e 's,</line>,\\n,g')
 
 # run testsuite
 .PHONY: check
@@ -202,12 +207,7 @@ gen-coveragerc:
 	@echo '    @(abc\.)?abstractmethod' >>${COVERAGERC}
 	@echo '    should_not_get_here' >>${COVERAGERC}
 	@echo '    ShouldNotGetHere' >>${COVERAGERC}
-	@printf '${COVERAGERC_EXCLUDE_LINES_TAIL}' >>${COVERAGERC}
-
-COVERAGERC_EXCLUDE_LINES_TAIL=\
-  $(shell printf '${COVERAGERC_EXCLUDE_LINES}'\
-   | sed -e 's/\s*<line>/    /g' -e 's,</line>,\\n,g')
-
+	@echo "$(call split,${COVERAGERC_EXCLUDE_LINES})" >>${COVERAGERC}
 
 # generate .flake8rc
 .PHONY: gen-flake8rc
@@ -245,14 +245,16 @@ gen-pytest-ini:
 gen-tox-ini:
 	@echo 'generating ${TOX_INI}'
 	@echo '[tox]' >${TOX_INI}
-	@echo 'envlist = lint, type, py{39,310,311}' >>${TOX_INI}
+	@echo 'envlist = ${TOX_ENVLIST}' >>${TOX_INI}
 	@echo 'skip_missing_interpreters = true' >>${TOX_INI}
 	@echo '' >>${TOX_INI}
 	@echo '[testenv]' >>${TOX_INI}
-	@echo 'allowlist_externals = py.test' >>${TOX_INI}
 	@echo 'commands = py.test {posargs}' >>${TOX_INI}
-	@echo 'extras = test' >>${TOX_INI}
-	@echo 'passenv = *' >>${TOX_INI}
+	@echo 'extras = tests' >>${TOX_INI}
+	@echo 'passenv =' >>${TOX_INI}
+	@echo "$(call split,${TOX_PASSENV})" >> ${TOX_INI}
+	@echo '[testenv:mypy]' >>${TOX_INI}
+	@echo 'commands = mypy -p ${PACKAGE}' >>${TOX_INI}
 
 # refresh idents
 .PHONY: ident
