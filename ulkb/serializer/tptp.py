@@ -143,5 +143,5 @@ class SerializerTPTP(
         self._write_object(obj, parent)
         self._write(').')
 
-    def _normalize_id(self, id, _re=re.compile('\W')):
+    def _normalize_id(self, id, _re=re.compile(r'\W')):
         return _re.sub('_', str(id))
