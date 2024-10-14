@@ -47,3 +47,12 @@ Run all tests:
 ```shell
 $ make check
 ```
+
+## Citation ##
+
+Guilherme Lima, Alexandre Rademaker, Rosario Uceda-Sossa. (2024). [ULKB
+Logic: A HOL-Based Framework for Reasoning over Knowledge
+Graphs](https://link.springer.com/chapter/10.1007/978-3-031-49342-3_4).  In:
+Barbosa, H., Zohar, Y. (eds) Formal Methods: Foundations and
+Applications. SBMF 2023. Lecture Notes in Computer Science,
+vol 14414. Springer, Cham.
